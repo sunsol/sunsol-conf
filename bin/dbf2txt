@@ -1,0 +1,459 @@
+#!/usr/bin/python
+# -*- coding:utf8 -*-
+
+''' 
+head
+    head
+    fields(*n)
+0x0D
+records(*n)
+    type
+    record
+(0x1A)
+'''
+import struct
+HEADFMT='<BBBBLHH20x' ## (0X30 IS FOX,3 IS DBASE),YEAR,MONTH,DAY,COUNTS,HEADLEN,RECORDLEN
+RECORDFMT='<10sxBLBB14x' ## FIELDNAME,FIELDTYPE,OFFSET,LENGTH,DECIAML_LENGTH
+TOPLEN=struct.calcsize(RECORDFMT)
+FILETYPEDABSE=3
+FILETYPEFOX=0x30
+FIELDTYPECHAR=67
+FIELDTYPENUM=78
+FIELDTYPEINT=73
+RECORDTYPENORMAL=chr(0x20)
+RECORDTYPEDELETE=chr(0x2A)
+HEADEND=chr(0x0D)
+FILEEND=chr(0x1A)
+import datetime
+
+class DBFError(Exception):
+    def __init__(self,message):
+        self.message='DBF struct error: %s\n' % message
+
+class DBFsetError(Exception):
+    def __init__(self,message):
+        self.message='DBF set error: %s\n' % message
+
+class Field(object):
+    def __init__(self,name,type=FIELDTYPECHAR,offset=0,length=20,decimallen=0):
+        self.name=name
+        self.type=type
+        self.length=length
+        self.decimallen=decimallen
+        self.offset=offset
+        if type==FIELDTYPENUM:
+            if not (length>decimallen>=0):
+                raise DBFsetError('num field length must > decimallen and >0')
+            if decimallen==0:
+                self.format='%'+('%d'%length)+'d'
+            else:
+                self.format='%'+('%d'%length)+'.'+('%d'%decimallen)+'f'
+        elif type==FIELDTYPECHAR:
+            if length<=0:
+                raise DBFsetError('str field length must >0')
+            self.decimallen=0
+            self.format='%'+('%d'%length)+'s'
+        elif type==FIELDTYPEINT:
+            if length==2:
+                self.format='<H'
+            elif length==4:
+                self.format='<L'
+            elif length==1:
+                self.format='B'
+            else:
+                raise DBFsetError('int field length must is 1 or 2 or 4')
+            self.decimallen=0
+        else:
+            print "warning: %s field type unknown "%name
+            self.format='%'+('%d'%length)+'s'
+            self.type=FIELDTYPECHAR
+    def gen(self,data):
+        if self.type==FIELDTYPENUM:
+            s=self.format % float(data)
+        elif self.type==FIELDTYPEINT:
+            s=struct.pack(self.format,int(data))
+        else:
+            s=self.format % str(data)
+        if len(s)>self.length:
+            print 'warning: data is cut, too long '
+        if len(s)<self.length:
+            s=s.ljust(self.length,' ')
+        return s[:self.length]
+    def genhead(self):
+        return struct.pack(RECORDFMT,self.name,self.type,self.offset,self.length,self.decimallen)
+    def parse(self,recorddata):
+        try:
+            s=recorddata[self.offset:self.offset+self.length]
+            if self.type==FIELDTYPENUM:
+                s=s.strip()
+                if self.decimallen==0:
+                    return int(s)
+                else:
+                    return float(s)
+            elif self.type==FIELDTYPEINT:
+                return struct.unpack(self.format,s)[0]
+            else:
+                return s.strip()
+        except:
+            raise DBFError(str(self)+' not match ')
+    @staticmethod
+    def parsehead(data):
+        name,type,offset,length,decimallen=struct.unpack(RECORDFMT,data[:TOPLEN])
+        name=name.strip('\0 ')
+        return Field(name,type,offset,length,decimallen)
+    def __str__(self):
+        if self.type==FIELDTYPENUM:
+            s=(self.name,'NUM',str(self.length)+":"+str(self.decimallen))
+        elif self.type==FIELDTYPEINT:
+            s=(self.name,'INT',str(self.length))
+        else:
+            s= self.type==FIELDTYPECHAR and 'STR' or 'UNKNOW'
+            s=(self.name,s,str(self.length))
+        return ''.join([x.center(20) for x in s])
+
+class Record(list):
+    def __init__(self):
+        super(Record,self).__init__()
+    def __str__(self):
+        return '\n'.join((str(x) for x in self))
+    def append(self,field):
+        if len(self)>0:
+            offset=self[-1].offset+self[-1].length
+        else:
+            offset=1
+        field.offset=offset
+        super(Record,self).append(field)
+        self.length=field.offset+field.length
+    def list2dict(self,listdata):
+        assert len(self)==len(listdata)
+        d={}
+        for x,y in zip(self,listdata):
+            d[x.name]=y
+        return d
+    def dict2list(self,dictdata):
+        assert len(self)==len(dictdata)
+        l=[]
+        for x in self:
+            l.append(dictdata[x.name])
+        return l
+    def gen(self,listdata):
+        if len(self)!=len(listdata): raise DBFsetError('field numbers not match')
+        s=RECORDTYPENORMAL + ''.join((x.gen(y) for x,y in zip(self,listdata)))
+        return s
+    def genhead(self):
+        if len(self)==0: raise DBFsetError('no fields set')
+        return ''.join((x.genhead() for x in self))
+    def parse(self,data,usedict=False):
+        s=data[:self.length]
+        l=[x.parse(s) for x in self]
+        if usedict:
+            l=self.list2dict(l)
+        if s[0]==RECORDTYPEDELETE:
+            return l,False
+        else:
+            return l,True
+    @staticmethod
+    def parsehead(data,length=0):
+        ''' length is recordsize ,not is headersize '''
+        fields=[]
+        while len(data)>=TOPLEN:
+            if data[0]==HEADEND:
+                break
+            f=Field.parsehead(data)
+            fields.append(f)
+            if length and (f.offset+f.length)>=length:
+                break
+            data=data[TOPLEN:]
+        r=Record()
+        for x in fields:
+            r.append(x)
+        r.length=length and length or (fields[-1].offset+fields[-1].length)
+        return r
+
+
+class DBF(list):
+    def __init__(self,fieldstruct,filetype=FILETYPEDABSE,creattime=datetime.date.today()):
+        super(DBF,self).__init__()
+        self.type=filetype
+        self.time=creattime
+        self.fields=fieldstruct
+        self.deletes=0
+    @staticmethod
+    def parsefile(filename):
+        import os
+        size=os.path.getsize(filename)
+        f=file(filename,'rb')
+        try:
+            l=struct.calcsize(HEADFMT)
+            flag,year,month,day,counts,headlen,recordlen=struct.unpack(HEADFMT,f.read(l))
+            if flag not in (FILETYPEDABSE,FILETYPEFOX):
+                print 'file type is unknown'
+            year+=1900
+            time=datetime.date(year,month,day)
+            fields=Record.parsehead(f.read(headlen-l),recordlen)
+            self=DBF(fields,flag,time)
+            f.seek(headlen)
+            l=size-f.tell()
+            while l>=recordlen and counts>0:
+                data,flag=fields.parse(f.read(recordlen))
+                if flag:
+                    super(DBF,self).append(data)
+                else:
+                    self.deletes+=1
+                counts-=1
+                l=size-f.tell()
+            f.close()
+            if counts>0:
+                raise DBFError('counts is error')
+            return self
+        except DBFsetError ,a:
+            raise DBFError('head not parse')
+        except DBFError , a:
+            raise a
+        except :
+            raise DBFError("can't parse file")
+    def append(self,data):
+        try:
+            self.fields.gen(data)
+        except:
+            raise DBFsetError("data is error")
+        super(DBF,self).append(data)
+    def genfile(self,filename):
+        try:
+            f=file(filename,'wb')
+            l=struct.calcsize(HEADFMT)
+            s=self.fields.genhead()
+            f.write(struct.pack(HEADFMT,self.type,self.time.year%100,self.time.month,self.time.day,
+                len(self),len(s)+l+1,self.fields.length))
+            f.write(s+HEADEND)
+            for x in self:
+                f.write(self.fields.gen(x))
+            f.write(FILEEND)
+            f.close()
+        except:
+            raise DBFsetError("file gen error")
+    def __str__(self):
+        if self.type==FILETYPEDABSE:
+            s='DBS'
+        elif self.type==FILETYPEFOX:
+            s='FOX'
+        else:
+            s='UNKNOWN'
+        s='type:\t%s\ttime:\t%s\n' % (s,self.time.strftime('%y-%m-%d'))
+        s=s+'counts:\t%d\tdeletes:\t%d\n' % (len(self),self.deletes)
+        return s+str(self.fields)
+
+
+def txt2dbf(source,target,fmt,names,delimiter,topline,verbose):
+    assert len(fmt)==len(names)
+    try:
+        r=Record()
+        for x,y in zip(names,fmt):
+            if y[0]=='n': 
+                if '.' in y:
+                    r.append(Field(x,FIELDTYPENUM,length=int(y[1:y.index('.')]),
+                        decimallen=int(y[y.index('.')+1:])))
+                else:
+                    r.append(Field(x,FIELDTYPENUM,length=int(y[1:])))
+            else: 
+                r.append(Field(x,FIELDTYPECHAR,length=int(y[1:])))
+        f=open(source)
+        if topline: f.next()
+        db=DBF(r)
+        for x in f:
+            db.append(x.strip().split(delimiter))
+        if verbose: print 'from %s read %d records'%(source,len(db))
+        db.genfile(target)
+        if verbose: print str(db)
+        print 'conv succee!\n'
+        return 0
+    except Exception,a:
+        import sys
+        sys.stderr.write(a.message)
+        print 'conv fail\n'
+        return 2
+
+def dbf2txt(source,target,delimiter,datefield,topline,verbose):
+    try:
+        db=DBF.parsefile(source)
+        if verbose: print str(db)
+        names=[x.name for x in db.fields]
+        if datefield:
+            for x in datefield:
+                if x not in names:
+                    raise Exception('datefield set not in dbf\n')
+        f=file(target,'w')
+        if topline:
+            f.write(delimiter.join(names)+'\n')
+        for x in db:
+            if datefield:
+                x=db.fields.list2dict(x)
+                for y in datefield:
+                    x[y]=datetime.datetime.strptime(x[y],datefield[y][0]).strftime(datefield[y][1])
+                x=db.fields.dict2list(x)
+            f.write(delimiter.join(map(str,x))+'\n')
+        f.close()
+        print 'conv succee!\n'
+        return 0
+    except Exception,a:
+        import sys
+        sys.stderr.write(a.message)
+        print 'conv fail\n'
+        return 2
+
+def usage(base,exitcode):
+    import sys
+    if exitcode:
+        sys.stderr.write('option is error\n')
+    if base=='txt2dbf':
+        print """Usage: txt2dbf --fmt=formatstring [options] sourcetxt [targetdbf]
+conv txt csvfile to dbase file
+  -d, --delimiter   default is ','
+  -h, --help        display this
+  -v                display more message 
+      --fmt=        dbf struct set string 
+                    n is number, s is char, next is length, use ','delimiter
+                    sample: n9.2,s10,n4,s0 ...
+      --names=      dbf fields name, default use field0,field1...
+                    use ',' delimiter
+                    sample: cid,did,dt....
+      --topline     the txt file has 1 topline, default not has, 
+                    if has and names not set ,names use the line"""
+    elif base=='dbf2txt':
+        print """Usage: dbf2txt [options] sourcedbf [targettxtfile]
+conv  dbase or fox file to csv txtfile
+  -d, --delimiter=  default is ','
+  -h, --help        display this
+  -v                display more message 
+      --show        just show struct no conv
+      --datefield=  just datetime format use
+                    use fieldname|strptime|strftime
+                    sample: starttime|%y%m%d%H%M%S|%Y-%m-%d,endtime:...
+      --topline     the txt file has 1 topline, default not has """
+    else:
+        print "Usage: "+base+""" --conv={dbf2txt,txt2dbf} [options] source [target]
+conv  dbase or fox file to csv txtfile
+  -d, --delimiter   default is ','
+  -h, --help        display this
+  -v                display more message 
+      --conv        dbf2txt or txt2dbf
+      --show        just show dbf struct no conv
+      --datefield=  just datetime format use for dbf2txt
+                    use fieldname:strptime:strftime
+                    sample: starttime:%y%m%d%H%M%S:%Y-%m-%d,endtime:...
+      --fmt=        dbf struct set string use for txt2dbf
+                    n is number, s is char, next is length, use ','delimiter
+                    sample: n9.2,s10,n4,s0 ...
+      --names=      dbf fields name, default use field0,field1...
+                    use ',' delimiter for txt2dbf
+                    sample: cid,did,dt....
+      --topline     the txt file has 1 topline, default not has, 
+                    if has and names not set ,names use the line"""
+    sys.exit(exitcode)
+
+def main():
+    import sys,getopt,os
+    base=os.path.basename(sys.argv[0])
+    try:
+        opts,args=getopt.getopt(sys.argv[1:],"hvd:",
+                ["help","names=","fmt=","conv=","topline","delimiter=","show","datefield="])
+    except getopt.GetoptError, err:
+        print str(err)
+        usage(base)
+        sys.exit(2)
+    if base=='txt2dbf' or base=='dbf2txt':
+        conv=base
+    else:
+        conv=''
+    verbose=topline=show=False
+    names=[]
+    fmt=[]
+    delimiter=','
+    datefield={}
+    for o,a in opts:
+        if o in ('-h','--help'):
+            usage(base,0)
+        elif o == '-v':
+            verbose=True
+        elif o in ('-t','--topline'):
+            topline=True
+        elif o in ('-d','--delimiter'):
+            delimiter=a
+        elif o == '--names':
+            names=a.split(',')
+        elif o == '--fmt':
+            import re
+            fmt=a.split(',')
+            r=re.compile(r'(n\d+|n\d+[.]\d+|s\d+)')
+            for x in fmt:
+                if not r.match(x):
+                    sys.stderr.write('fmt set error\n')
+                    usage(base,2)
+        elif o == '--datefield':
+            try:
+                d=datetime.datetime.now()
+                datefield=dict([(x.split('|')[0],x.split('|')[1:3]) for x in a.split(',')])
+                for x in datefield:
+                    d.strftime(datefield[x][0])
+                    d.strftime(datefield[x][1])
+            except:
+                sys.stderr.write('datefield set error\n')
+                usage(base,2)
+        elif o == '--show':
+            show=True
+        elif o == '--conv':
+            if conv: usage(base,2)
+            if a=='txt2dbf' or a=='dbf2txt':
+                conv=a
+            else:
+                usage(base,2)
+    if not conv:usage(base,2)
+    if not args:usage(base,2)
+    if not os.path.isfile(args[0]):
+        sys.stderr.write('error:%s file not exist\n'%args[0])
+        sys.exit(2)
+    source=args[0]
+    args=args[1:]
+    if conv=='txt2dbf' and fmt:
+        if not names and not topline: names=['field%d'% x for x in range(len(fmt))]
+        if not names: #use topline
+            s=open(source).next().strip()
+            names=s.split(delimiter)
+        if names and len(names)!=len(fmt): 
+            sys.stderr.write('fmt not match names\n')
+            sys.exit(2)
+        if args: target=args[1]
+        else: target=os.path.splitext(source)[0]+'.dbf'
+        sys.exit(txt2dbf(source,target,fmt,names,delimiter,topline,verbose))
+    elif conv=='dbf2txt': 
+        #global Field
+        #def parse(self,recorddata):
+        #    try:
+        #        return recorddata[self.offset:self.offset+self.length].strip()
+        #    except:
+        #        raise DBFError(str(self)+' not match ')
+        #Field.parse=parse
+        if show:
+            try:
+                a=DBF.parsefile(source)
+            except Exception,err:
+                sys.stderr.write(err.message)
+                sys.exit(2)
+            print str(a)
+            print
+            print delimiter.join([x.name for x in a.fields])
+            for x in a[:10]:
+                print delimiter.join([str(y) for y in x])
+            sys.exit()
+        if args: target=args[1]
+        else: target=os.path.splitext(source)[0]+'.txt'
+        sys.exit(dbf2txt(source,target,delimiter,datefield,topline,verbose))
+    else:
+        usage(base,2)
+
+if __name__=='__main__':
+    main()
+
+        
+
+

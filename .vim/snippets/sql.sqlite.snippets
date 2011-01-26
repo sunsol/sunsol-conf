@@ -1,0 +1,52 @@
+snippet exp
+	explain query plan
+		${1}
+snippet alter
+	alter table ${1:tablename}
+		add column ${2:column-name} ${3:type-name} ;
+snippet att
+	attach database ${1:filename} as ${2:database-name} ;
+snippet beg
+	begin transaction;
+		${1:rollback transaction to savepiont;}
+		commit transaction;
+	end transaction;
+snippet index
+	create ${1:unique} index if not exists ${2:index-name}
+		on ${3:table-name} ( ${4:column-name} ${5:asc} );
+snippet table
+	create table if not exists ${1:table-name}
+		( ${2:column-name1} ${3:primary key autoincrement},
+		  ${4:column-name2} ${5:type-name} );
+snippet into
+	create table if not exists ${1:table-name} as 
+		sel${1}
+snippet view
+	create view if not exists ${1:view-name} as
+		sel${1}
+snippet subdate
+	strftime('%s',${1})-strftime('%s',${2})
+snippet adddate
+	datetime(${1:'now'},'+'||${2: }||' second')
+snippet del
+	delete from ${1:table-name} where ${2};
+snippet deta
+	detach database ${1:database-name};
+snippet drop
+	drop ${1:table} if exists ${2:name};
+snippet ins
+	insert into ${1:table-name} ${2:(column1,column2)}
+		values ( ${3:value1,value2} );
+snippet sel
+	select ${1: } from ${2:table-name}
+		where ${3: }
+		group by ${4: }
+		order by ${5: }
+		having ${6: };
+snippet join
+	join ${1:table-name} on ${2:col} = ${3:col}
+snippet full
+	create virtual table ${1:name} using ft3(${2:content});
+snippet up
+	update ${1:table-name} set ${2:colunm-name}=${3:value}
+		where ${4};

@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ $# -ne 1 ]
+then
+	echo "Usage: `basename $0` <dot file> "
+	exit 1
+fi
+dot -Tpng -o "$1".png $1
+if [ $? -eq 0 ]
+then
+	gthumb "$1".png &
+fi
+

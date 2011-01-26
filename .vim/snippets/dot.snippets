@@ -1,0 +1,28 @@
+snippet graph
+	graph ${1:title} {
+		graph [${2:图属性}];
+		node [${3:节点常规属性}];
+		edge [${4:边常规属性}];
+		${5:a -- b;}
+	}
+	
+
+snippet digraph
+	digraph ${1:title} {
+		graph [${2:图属性}];
+		node [${3:节点常规属性}];
+		edge [${4:边常规属性}];
+		${5:a:se -> b:nw;}
+	}
+	
+snippet la
+	label="${1:string}"
+
+snippet {
+	{${1:rank=same};${2:name1};${3:name2};}
+
+snippet sub
+	subgraph ${1:title} {
+		${2:a -> b;}
+	}
+
