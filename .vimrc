@@ -1,7 +1,5 @@
 " qk ... 记录宏
 " "kp  打印宏
-set nocompatible
-set fencs=ucs-bom,utf-8,gb18030,cp936   "自动识别中文"
 setglobal fileencoding=utf-8
 set mouse=a
 set nobomb
