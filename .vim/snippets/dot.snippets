@@ -17,12 +17,25 @@ snippet digraph
 	
 snippet la
 	label="${1:string}"
-
 snippet {
 	{${1:rank=same};${2:name1};${3:name2};}
-
 snippet sub
 	subgraph ${1:title} {
 		${2:a -> b;}
 	}
+snippet html
+	shape=plaintext,fontsize=${1:size},
+	label=<<table align="center">
+		<tr><td colspan="2"><font point-size="${2:titlesize}">${3:title}</font></td></tr>
+		<tr><td>${4:name1}</td><td>${5:comment1}</td></tr>
+		<tr><td>${6:name1}</td><td>${7:comment1}</td></tr>
+		<tr><td>${8:name1}</td><td>${9:comment1}</td></tr>
+		</table>>
 
+snippet html3
+	shape=plaintext,fontsize=${1:size},
+	label=<<table align="center">
+		<tr><td colspan="3"><font point-size="${2:titlesize}">${3:title}</font></td></tr>
+		<tr><td>${4:name1}</td><td>${5:comment1}</td><td>${6:comment11}</td></tr>
+		<tr><td>${7:name1}</td><td>${8:comment1}</td><td>${9:comment1}</td></tr>
+		</table>>
