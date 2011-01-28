@@ -249,7 +249,7 @@ let s:fonts =  [
 
 let s:style =  [
 \	{'word': 'bold',	'menu': '粗线条 [E,N]'},
-\	{'word': 'dasheh',	'menu': '断线条 [E,N]'},
+\	{'word': 'dashed',	'menu': '断线条 [E,N]'},
 \	{'word': 'dotted',	'menu': '点线条 [E,N]'},
 \	{'word': 'filled',	'menu': '填充 [N]'},
 \	{'word': 'rounded',	'menu': '圆角 [N]'},
