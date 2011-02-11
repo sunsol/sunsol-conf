@@ -1,4 +1,8 @@
+" qk ... 记录宏
+" "kp  打印宏
+fixdel
 set nocompatible
+set backspace=2
 set fencs=ucs-bom,utf-8,gb18030,cp936   "自动识别中文"
 setglobal fileencoding=utf-8
 set mouse=a
@@ -125,7 +129,10 @@ endfunction
 
 au FileType c nmap <F8> :call Ctagadd('
 au FileType cpp nmap <F8> :call Ctagadd('
-
+autocmd Filetype *
+	    \	if &omnifunc == "" |
+	    \		setlocal omnifunc=syntaxcomplete#Complete |
+	    \	endif
 " 提示菜单快捷键 忽略，翻页
 "inoremap <expr> <SPACE>	   pumvisible()?"\<C-Y>":"\<SPACE>"
 inoremap <expr> <C-J>	   pumvisible()?"\<PageDown>\<C-N>\<C-P>":"\<C-X><C-O>"
@@ -174,3 +181,11 @@ let g:WMGraphviz_output="png"
 let g:WMGraphviz_viewer="gthumb"
 " <leader> lv ----> view
 " <leader> ll ----> compile to graph
+" 利用google翻译单词
+nmap <Space> :Trans<CR>
+" AlignCtrl 设置对齐方式
+" w去掉每行的开始空白 W保留开始空白 I以首行为基线
+" l左对齐 r右对齐 lr中间对齐 -跳过 :其余的不对齐 每一项可以指定一列 如 -lrll-	
+let g:Align_xstrlen=3 "对齐中文和tab
+"tip
+" W,B在html时很有用

@@ -313,6 +313,6 @@ if has("gui_running") || &t_Co==256
    unlet i
 
    autocmd CursorHold * silent call s:PreviewCSSColorInLine('.')
-   autocmd CursorHoldI * silent call s:PreviewCSSColorInLine('.')
+   "autocmd CursorHoldI * silent call s:PreviewCSSColorInLine('.')
    set ut=100
 endif		" has("gui_running")

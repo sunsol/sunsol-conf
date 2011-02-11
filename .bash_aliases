@@ -27,3 +27,4 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias cctags='ctags --language-force=c++ --c++-kinds=+p --fields=+iaS --extra=+q -I "__nonnull __dead2 __pure2 __unused __packed __aligned __section __always_inline __wur __THROW __attribute_pure__ __attribute__ __asm G_GNUC_PURE G_GNUC_MALLOC G_GNUC_NULL_TERMINTED G_GNUC_ALLOC_SIZE G_GNUC_ALLOC_SIZE2 G_GNUC_PRINTF G_GNUC_SCANF G_GNUC_FORMAT G_GNUC_NORETURN G_GNUC_CONST G_GNUC_UNUSED G_GNUC_NO_INSTRUMENT" '
+alias findi='find . -iname '
