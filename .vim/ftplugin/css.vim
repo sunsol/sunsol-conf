@@ -1,8 +1,6 @@
 " Css file plugin for .css file
-" <C-X><C-U> complete tip
-" <F2> add use html
-" <C-X><C-U> 补全 <F2> 添加关联的html文件增加选择器补全
-" Last Change: 2011-2-12
+" <C-X><C-U> 补全 :CSSaddhtml 添加关联的html文件增加选择器补全
+" Last Change: 2011-2-21
 " Maintainer: sunsol
 " License:	This file is placed in the public domain.
 
@@ -11,7 +9,6 @@ if exists("b:cssdid_ftplugin")
 	finish
 endif
 let b:cssdid_ftplugin = 1
-
 
 let s:other_values = {
 \	"$bd-style":	[
@@ -86,6 +83,7 @@ let s:other_values = {
 
 "let s:font=["caption","icon","menu","message-box","small-caption","status-bar"]
 let s:background = ["background-image", "background-repeat", "background-attachment", "$background-position-first", "$background-position-second", "background-color"]
+let s:list_style = ["list-style-type", "list-style-position", "list-style-image"]
 let s:properties_value_border = ['border-top', 'border', 'border-bottom', 'border-right', 'border-left', 'outline']
 let s:properties_value_other = {'margin':'$number', 'padding':'$number', 'border-style':'$bd-style', 'border-color':'$color', 'border-width':'$bd-width'}
 
@@ -103,7 +101,8 @@ let s:properties_value = {
 \			{"word": "root"},
 \			{"word": "auto"}],
 \	"list-style-image":	[
-\			{"word": "url(xxpath)"}],
+\			{"word": "url(xxpath)"},
+\			{"word": "none"}],
 \	"outline-width":	[
 \			{"word": "2px",	 "menu": "宽度"},
 \			{"word": "thin",	 "menu": "1px"},
@@ -460,10 +459,6 @@ let s:properties_value = {
 \	"clip":	[
 \			{"word": "auto"},
 \			{"word": "rect(top,right,bottom,left)",	 "menu": "部分显示"}],
-\	"list-style":	[
-\			{"word": "list-style-type"},
-\			{"word": "list-style-position"},
-\			{"word": "list-style-image"}],
 \	"padding-bottom":	[
 \			{"word": "150%"},
 \			{"word": "16px",	 "menu": "像素"},
@@ -627,7 +622,6 @@ let s:properties = [
 \	{"word": "outline",	 "menu": "文字外包线"},
 \	{"word": "content",	 "menu": "只用于:before和:after",	 "info": "只用于:before和:after"},
 \	{"word": "list-style-type",	 "menu": "标签样式,用于<ul><li>",	 "info": "标签样式,用于<ul><li>"},
-\	{"word": "list-style-type",	 "menu": "标签样式,用于<ol><li>",	 "info": "标签样式,用于<ol><li>"},
 \	{"word": "list-style-position",	 "menu": "标签位置,用于<ol><ul><li>",	 "info": "标签位置,用于<ol><ul><li>"},
 \	{"word": "list-style-image",	 "menu": "标签图标,用于<ol><ul><li>",	 "info": "标签图标,用于<ol><ul><li>"},
 \	{"word": "list-style",	 "menu": "标签,用于<ol><ul><li>",	 "info": "标签,用于<ol><ul><li>"},
@@ -844,6 +838,33 @@ function! s:Do_background_pos(s)
 	endif
 endfun
 
+function! s:Do_liststyle(s)
+	let values = split(a:s, '\s\+')
+	if empty(values)
+		let pos = col('.')
+		let b:complete_suggest = {'suggest': s:properties_value[s:list_style[0]], 'complete': function('s:Normal_values_complete')}
+		return pos
+	else
+		let endspace = a:s =~ '\s$'
+		let l = len(values)
+		if endspace
+			let pos = col('.')
+		else
+			let pos =  col('.') - strlen(values[-1])
+			if pos < 1
+				return 0
+			endif
+			let l = l - 1
+		endif
+		if l < len(s:list_style) 
+			let b:complete_suggest = {'suggest': s:properties_value[s:list_style[l]], 'complete': function('s:Normal_values_complete')}
+			return pos
+		else
+			return 0
+		endif
+	endif
+endfun
+
 function! s:Do_background(s)
 	let values = split(a:s, '\s\+')
 	if empty(values)
@@ -930,6 +951,8 @@ function! s:In_values_is(s)
 			return s:Do_font_family(matchpart[2])
 		elseif propertyname == 'background'
 			return s:Do_background(matchpart[2])
+		elseif propertyname == 'list-style'
+			return s:Do_liststyle(matchpart[2])
 		endif
 	endif
 	return 0
@@ -1196,5 +1219,5 @@ function! g:CssComplete(findstart, base)
 endfun
 
 set completefunc=g:CssComplete
-nmap <buffer> <F2> :call Cssaddusehtml('*.htm*')
 
+com! -buffer -nargs=+ -complete=file CSSaddhtml call g:Cssaddusehtml(<f-args>)

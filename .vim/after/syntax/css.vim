@@ -314,5 +314,5 @@ if has("gui_running") || &t_Co==256
 
    autocmd CursorHold * silent call s:PreviewCSSColorInLine('.')
    "autocmd CursorHoldI * silent call s:PreviewCSSColorInLine('.')
-   set ut=100
+   "set ut=2000
 endif		" has("gui_running")

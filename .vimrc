@@ -1,3 +1,5 @@
+"tip
+" W,B在html时很有用
 " qk ... 记录宏
 " "kp  打印宏
 fixdel
@@ -66,7 +68,6 @@ syn on
 let g:vimsyn_minlines=300
 let g:vimsyn_maxlines=3000
 au FileType * lcd %:p:h
-
 set tags=./tags,tags;
 
 au FileType javascript set makeprg=/home/zn/bin/jsl\ -nologo\ -nofilelisting\ -nosummary\ -nocontext\ -conf\ '/home/zn/bin/jsl.conf'\ -proess\ %
@@ -187,5 +188,7 @@ nmap <Space> :Trans<CR>
 " w去掉每行的开始空白 W保留开始空白 I以首行为基线
 " l左对齐 r右对齐 lr中间对齐 -跳过 :其余的不对齐 每一项可以指定一列 如 -lrll-	
 let g:Align_xstrlen=3 "对齐中文和tab
-"tip
-" W,B在html时很有用
+let g:EclimDisabled=1
+" <Alt+x> <Alt+c> 切换注释
+let g:EnhCommentifyUseAltKeys = 'yes'
+"Tabularize /匹配项（一字符）/命令l[x]c[x]r[x] x为距离
