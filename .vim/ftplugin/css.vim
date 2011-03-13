@@ -9,7 +9,7 @@ if exists("b:cssdid_ftplugin")
 	finish
 endif
 let b:cssdid_ftplugin = 1
-
+ "s:other_values {{{
 let s:other_values = {
 \	"$bd-style":	[
 \			{"word": "none"},
@@ -80,13 +80,14 @@ let s:other_values = {
 \			{"word": "2个参数",	 "menu": "上下和左右"},
 \			{"word": "3个参数",	 "menu": "上和左右和下"},
 \			{"word": "4个参数",	 "menu": "上右下左"}]}
+" }}}
 
 "let s:font=["caption","icon","menu","message-box","small-caption","status-bar"]
 let s:background = ["background-image", "background-repeat", "background-attachment", "$background-position-first", "$background-position-second", "background-color"]
 let s:list_style = ["list-style-type", "list-style-position", "list-style-image"]
 let s:properties_value_border = ['border-top', 'border', 'border-bottom', 'border-right', 'border-left', 'outline']
 let s:properties_value_other = {'margin':'$number', 'padding':'$number', 'border-style':'$bd-style', 'border-color':'$color', 'border-width':'$bd-width'}
-
+ "s:properties_value {{{
 let s:properties_value = {
 \	"border-top-left-radius":	[
 \			{"word": '1/1',	"menu": "number/number"}],
@@ -599,8 +600,9 @@ let s:properties_value = {
 \			{"word": "16px",	 "menu": "像素"},
 \			{"word": "1em",		 "menu": "100%"}]
 \	}
-
-let s:properties = [
+" }}}
+"s:properties {{{
+let s:properties = [ 
 \	{"word": "font",	 "menu": "字体"},
 \	{"word": "font-style",	 "menu": "字体样式"},
 \	{"word": "font-weight",	 "menu": "字体粗细"},
@@ -620,11 +622,11 @@ let s:properties = [
 \	{"word": "outline-width",	 "menu": "文字外包线宽度"},
 \	{"word": "outline-color",	 "menu": "文字外包线颜色"},
 \	{"word": "outline",	 "menu": "文字外包线"},
-\	{"word": "content",	 "menu": "只用于:before和:after",	 "info": "只用于:before和:after"},
-\	{"word": "list-style-type",	 "menu": "标签样式,用于<ul><li>",	 "info": "标签样式,用于<ul><li>"},
-\	{"word": "list-style-position",	 "menu": "标签位置,用于<ol><ul><li>",	 "info": "标签位置,用于<ol><ul><li>"},
-\	{"word": "list-style-image",	 "menu": "标签图标,用于<ol><ul><li>",	 "info": "标签图标,用于<ol><ul><li>"},
-\	{"word": "list-style",	 "menu": "标签,用于<ol><ul><li>",	 "info": "标签,用于<ol><ul><li>"},
+\	{"word": "content",	 "menu": "只用于:before和:after"},
+\	{"word": "list-style-type",	 "menu": "标签样式,用于<ul><li>"},
+\	{"word": "list-style-position",	 "menu": "标签位置,用于<ol><ul><li>"},
+\	{"word": "list-style-image",	 "menu": "标签图标,用于<ol><ul><li>"},
+\	{"word": "list-style",	 "menu": "标签,用于<ol><ul><li>"},
 \	{"word": "background",	 "menu": "背景"},
 \	{"word": "background-image",	 "menu": "背景图片"},
 \	{"word": "background-repeat",	 "menu": "平铺方式"},
@@ -667,16 +669,16 @@ let s:properties = [
 \	{"word": "border-top-right-radius",	 "menu": "右上角"},
 \	{"word": "border-bottom-left-radius",	 "menu": "左下角"},
 \	{"word": "border-bottom-right-radius",	 "menu": "右下角"},
-\	{"word": "border-collapse",	 "menu": "表边形式,用于<table><th><tr>",	 "info": "表边形式,用于<table><th><tr>"},
-\	{"word": "border-spacing",	 "menu": "表边间距,用于<table><th><tr>",	 "info": "表边间距,用于<table><th><tr>"},
-\	{"word": "caption-side",	 "menu": "标题位置,用于<table><caption>",	 "info": "标题位置,用于<table><caption>"},
-\	{"word": "vertical-align",	 "menu": "上下对齐,用于<span><th><td>",	 "info": "上下对齐,用于<span><th><td>"},
-\	{"word": "empty-cells",	 "menu": "清除格子的背景和边,用于<th><td>",	 "info": "清除格子的背景和边,用于<th><td>"},
+\	{"word": "border-collapse",	 "menu": "表边形式,用于<table><th><tr>"},
+\	{"word": "border-spacing",	 "menu": "表边间距,用于<table><th><tr>"},
+\	{"word": "caption-side",	 "menu": "标题位置,用于<table><caption>"},
+\	{"word": "vertical-align",	 "menu": "上下对齐,用于<span><th><td>"},
+\	{"word": "empty-cells",	 "menu": "清除格子的背景和边,用于<th><td>"},
 \	{"word": "position",	 "menu": "定位"},
-\	{"word": "top",	 "menu": "position不能为静态",	 "info": "position不能为静态"},
-\	{"word": "left",	 "menu": "position不能为静态",	 "info": "position不能为静态"},
-\	{"word": "right",	 "menu": "position不能为静态",	 "info": "position不能为静态"},
-\	{"word": "bottom",	 "menu": "position不能为静态",	 "info": "position不能为静态"},
+\	{"word": "top",	 "menu": "position不能为静态"},
+\	{"word": "left",	 "menu": "position不能为静态"},
+\	{"word": "right",	 "menu": "position不能为静态"},
+\	{"word": "bottom",	 "menu": "position不能为静态"},
 \	{"word": "width",	 "menu": "应用于块状元素"},
 \	{"word": "height",	 "menu": "应用于块状元素"},
 \	{"word": "float",	 "menu": "浮动位置"},
@@ -684,7 +686,7 @@ let s:properties = [
 \	{"word": "visibility",	 "menu": "是否显示"},
 \	{"word": "display",	 "menu": "呈现状态"},
 \	{"word": "z-index",	 "menu": "数字高的置前"},
-\	{"word": "clip",	 "menu": "position为absolute可用",	 "info": "position为absolute可用"},
+\	{"word": "clip",	 "menu": "position为absolute可用"},
 \	{"word": "overflow",	 "menu": "是否有滚动条"},
 \	{"word": "overflow-x",	 "menu": "是否有滚动条"},
 \	{"word": "overflow-y",	 "menu": "是否有滚动条"},
@@ -694,34 +696,36 @@ let s:properties = [
 \	{"word": "nav-down",	 "menu": "按下的目标"},
 \	{"word": "nav-left",	 "menu": "按左的目标"},
 \	{"word": "cursor",	 "menu": "鼠标图示"}]
-
+" }}}
+ "s:pesudos {{{
 let s:pesudos = [
 \	{"word": "first-letter",	 "menu": "首字符"},
 \	{"word": "first-line",	 "menu": "首行"},
 \	{"word": "before",	 "menu": "前置文字"},
 \	{"word": "after",	 "menu": "后置文字"},
-\	{"word": ":selection",	 "menu": "选择文字使用的颜色"},
+\	{"word": "selection",	 "menu": "选择文字使用的颜色"},
 \	{"word": "link",	 "menu": "只对<a>有效"},
 \	{"word": "visited",	 "menu": "只对<a>有效"},
-\	{"word": "hover",	 "menu": "滑过时效果 只对<a>有效",	 "info": "滑过时效果 只对<a>有效"},
+\	{"word": "hover",	 "menu": "滑过时效果 只对<a>有效"},
 \	{"word": "focus",	 "menu": "获得焦点时"},
-\	{"word": "empty",	 "menu": "空span时效果 常配合after使用",	 "info": "空span时效果 常配合after使用"},
-\	{"word": "target",	 "menu": "当url地址的#id为目标时",	 "info": "当url地址的#id为目标时"},
+\	{"word": "empty",	 "menu": "空span时效果 常配合after使用"},
+\	{"word": "target",	 "menu": "当url地址的#id为目标时"},
 \	{"word": "enabled",	 "menu": "用于表单里可用状态"},
 \	{"word": "disabled",	 "menu": "用于表单里不可用状态"},
 \	{"word": "checked",	 "menu": "用于表单里选中的元素"},
 \	{"word": "first-child",	 "menu": "只建议用于<li>"},
 \	{"word": "last-child",	 "menu": "只建议用于<li>"},
-\	{"word": "ntp-child(odd,even,3n+1)",	 "menu": "建议用于<tr><td><li> odd奇数",	 "info": "建议用于<tr><td><li>,odd奇数"},
+\	{"word": "ntp-child(odd,even,3n+1)",	 "menu": "建议用于<tr><td><li> odd奇数"},
 \	{"word": "ntp-of-type(odd,even,3n+1)",	 "menu": "同级兄弟元素 odd奇数"},
-\	{"word": "ntp-last-child(xx)",	 "menu": "建议用于<tr><td><li> 倒数第xx个",	 "info": "建议用于<tr><td><li> 倒数第xx个"},
-\	{"word": "ntp-last-of-type(xx)",	 "menu": "同级兄弟元素 倒数第xx个",	 "info": "同级兄弟元素 倒数第xx个"},
+\	{"word": "ntp-last-child(xx)",	 "menu": "建议用于<tr><td><li> 倒数第xx个"},
+\	{"word": "ntp-last-of-type(xx)",	 "menu": "同级兄弟元素 倒数第xx个"},
 \	{"word": "first-of-type",	 "menu": "同级兄弟元素的第一个"},
 \	{"word": "last-of-type",	 "menu": "同级兄弟元素的最后一个"},
 \	{"word": "only-child",	 "menu": "父元素里只包含这一个的"},
 \	{"word": "only-of-type",	 "menu": "该类元素全局只有一个时"}]
+"}}}
 
-function! s:Normal_values_complete(partstr) 
+function! s:Normal_values_complete(partstr) "{{{
 	let output = []
 	for name in b:complete_suggest.suggest
 		if name.word =~ '^' . a:partstr
@@ -734,13 +738,13 @@ function! s:Normal_values_complete(partstr)
 		endfor
 	endif
 	return output
-endfun
+endfun "}}}
 
 function! s:Dir4_values_complete(partstr)
 	return b:complete_suggest.suggest
 endfun
 
-function! s:Dir4_values(dir, name) 
+function! s:Dir4_values(dir, name) "{{{
 	let output = []
 	for i in range(a:dir,3)
 		call add(output, s:other_values['$dir4'][i])
@@ -749,14 +753,12 @@ function! s:Dir4_values(dir, name)
 		call add(output, x)
 	endfor
 	return output
-endfun
+endfun "}}}
 
-function! s:Is_dir4(s,name)
+function! s:Value_numbers(s)"{{{
 	let values = split(a:s, '\s\+')
 	if empty(values)
-		let pos = col('.')
-		let b:complete_suggest = {'suggest': s:Dir4_values(0, s:properties_value_other[a:name]), 'complete': function('s:Dir4_values_complete')}
-		return pos
+		return [0,col('.')]
 	else
 		let endspace = a:s =~ '\s$'
 		let l = len(values)
@@ -765,152 +767,96 @@ function! s:Is_dir4(s,name)
 		else
 			let pos =  col('.') - strlen(values[-1])
 			if pos < 1
-				return 0
+				return [0,col('.')]
 			endif
 			let l = l - 1
 		endif
-		if l < 4
-			let b:complete_suggest = {'suggest': s:Dir4_values(l, s:properties_value_other[a:name]), 'complete': function('s:Dir4_values_complete')}
-		else
-			return 0
-		endif
-		return pos
+		return [l,pos]
 	endif
-endfun
+endfunc "}}}
 
-function! s:Is_border(s, name)
-	let values = split(a:s, '\s\+')
-	if empty(values)
-		let pos = col('.')
-		let b:complete_suggest = {'suggest': s:other_values['$bd-width'] + s:other_values['$bd-style'] + s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
-		return pos
+function! s:Is_dir4(s,name)"{{{
+	let value = s:Value_numbers(a:s)
+	if value[0] < 4
+		let b:complete_suggest = {'suggest': s:Dir4_values(value[0], s:properties_value_other[a:name]), 'complete': function('s:Dir4_values_complete')}
+		return value[1]
 	else
-		let endspace = a:s =~ '\s$'
-		if endspace
-			let pos = col('.')
-		else
-			let pos =  col('.') - strlen(values[-1])
-			if pos < 1
-				return 0
-			endif
-		endif
-		let l = len(values)
-		if (l > 3) || ( (l == 3) && endspace )
-			return 0
-		endif
-		if (l == 1) && !endspace
-			let b:complete_suggest = {'suggest': s:other_values['$bd-width'] + s:other_values['$bd-style'] + s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
-		elseif ((l == 2) && !endspace) || ((l == 1) && endspace)
-			let b:complete_suggest = {'suggest': s:other_values['$bd-style'] + s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
-		elseif ((l == 3) && !endspace) || ((l == 2) && endspace)
-			let b:complete_suggest = {'suggest': s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
-		endif
-		return pos
-	endif
-endfun
-
-function! s:Do_background_pos(s)
-	let values = split(a:s, '\s\+')
-	if empty(values)
-		let pos = col('.')
-		let b:complete_suggest = {'suggest': s:other_values['$background-position-first'], 'complete': function('s:Normal_values_complete')}
-		return pos
-	else
-		let endspace = a:s =~ '\s$'
-		if endspace
-			let pos = col('.')
-		else
-			let pos =  col('.') - strlen(values[-1])
-			if pos < 1
-				return 0
-			endif
-		endif
-		let l = len(values)
-		if (l > 2) || ( (l == 2) && endspace )
-			return 0
-		endif
-		if (l == 1) && !endspace
-			let b:complete_suggest = {'suggest': s:other_values['$background-position-first'], 'complete': function('s:Normal_values_complete')}
-		else
-			let b:complete_suggest = {'suggest': s:other_values['$background-position-second'], 'complete': function('s:Normal_values_complete')}
-		endif
-		return pos
-	endif
-endfun
-
-function! s:Do_liststyle(s)
-	let values = split(a:s, '\s\+')
-	if empty(values)
-		let pos = col('.')
-		let b:complete_suggest = {'suggest': s:properties_value[s:list_style[0]], 'complete': function('s:Normal_values_complete')}
-		return pos
-	else
-		let endspace = a:s =~ '\s$'
-		let l = len(values)
-		if endspace
-			let pos = col('.')
-		else
-			let pos =  col('.') - strlen(values[-1])
-			if pos < 1
-				return 0
-			endif
-			let l = l - 1
-		endif
-		if l < len(s:list_style) 
-			let b:complete_suggest = {'suggest': s:properties_value[s:list_style[l]], 'complete': function('s:Normal_values_complete')}
-			return pos
-		else
-			return 0
-		endif
-	endif
-endfun
-
-function! s:Do_background(s)
-	let values = split(a:s, '\s\+')
-	if empty(values)
-		let pos = col('.')
-		let b:complete_suggest = {'suggest': s:properties_value[s:background[0]], 'complete': function('s:Normal_values_complete')}
-		return pos
-	else
-		let endspace = a:s =~ '\s$'
-		let l = len(values)
-		if endspace
-			let pos = col('.')
-		else
-			let pos =  col('.') - strlen(values[-1])
-			if pos < 1
-				return 0
-			endif
-			let l = l - 1
-		endif
-		if l < len(s:background) 
-			if s:background[l] =~ '\$'
-				let b:complete_suggest = {'suggest': s:other_values[s:background[l]], 'complete': function('s:Normal_values_complete')}
-			else
-				let b:complete_suggest = {'suggest': s:properties_value[s:background[l]], 'complete': function('s:Normal_values_complete')}
-			endif
-			return pos
-		else
-			return 0
-		endif
-	endif
-endfun
-
-function! s:Do_border_radius(s)
-	let values = split(s, '/')
-	if len(values) > 2 
 		return 0
 	endif
+endfun "}}}
+
+function! s:Is_border(s, name)"{{{
+	let value = s:Value_numbers(a:s)
+	if value[0] == 0
+		let b:complete_suggest = {'suggest': s:other_values['$bd-width'] + s:other_values['$bd-style'] + s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
+		return value[1]
+	elseif value[0] == 1
+		let b:complete_suggest = {'suggest': s:other_values['$bd-style'] + s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
+		return value[1]
+	elseif value[0] == 2
+		let b:complete_suggest = {'suggest': s:other_values['$color'], 'complete': function('s:Normal_values_complete')}
+		return value[1]
+	endif
+	return 0
+endfun "}}}
+
+function! s:Do_background_pos(s) "{{{
+	let value = s:Value_numbers(a:s)
+	if value[0] == 0
+		let b:complete_suggest = {'suggest': s:other_values['$background-position-first'], 'complete': function('s:Normal_values_complete')}
+		return value[1]
+	elseif value[0] == 1
+		let b:complete_suggest = {'suggest': s:other_values['$background-position-second'], 'complete': function('s:Normal_values_complete')}
+		return value[1]
+	endif
+	return 0
+endfun "}}}
+
+function! s:Do_liststyle(s)"{{{
+	let value = s:Value_numbers(a:s)
+	if value[0] < len(s:list_style) 
+		let b:complete_suggest = {'suggest': s:properties_value[s:list_style[value[0]]], 'complete': function('s:Normal_values_complete')}
+		return value[1]
+	else
+		return 0
+	endif
+endfun "}}}
+
+function! s:Do_background(s)"{{{
+	let value = s:Value_numbers(a:s)
+	if value[0] < len(s:background) 
+		if s:background[value[0]] =~ '\$'
+			let b:complete_suggest = {'suggest': s:other_values[s:background[value[0]]], 'complete': function('s:Normal_values_complete')}
+		else
+			let b:complete_suggest = {'suggest': s:properties_value[s:background[value[0]]], 'complete': function('s:Normal_values_complete')}
+		endif
+		return value[1]
+	else
+		return 0
+	endif
+endfun "}}}
+
+function! s:Do_border_radius(s) "{{{
+	let values = split(a:s, '/')
 	if empty(values)
 		let pos = col('.')
-		let b:complete_suggest = {'suggest': [{'word':'格式', 'menu':'number/number'}], 'complete': function('s:Dir4_values_complete')}
+		call s:Is_dir4('','padding')
+		call insert(b:complete_suggest['suggest'],{'word':'格式', 'menu':'numbers/numbers'})
 		return pos
+	elseif len(values) == 1 && a:s !~ '/$'
+		let pos = s:Is_dir4(values[0], 'padding')
+		call insert(b:complete_suggest['suggest'],{'word':'格式', 'menu':'numbers/numbers'})
+		return pos
+	elseif len(values) == 1 && a:s =~ '/$'
+		return s:Is_dir4('', 'padding')
+	elseif len(values) == 2
+		return s:Is_dir4(values[1], 'padding')
 	else
-		return s:Is_dir4(values[-1], 'padding')
+		return 0
 	endif
-endfun
+endfun "}}}
 
-function! s:Do_font_family(s)
+function! s:Do_font_family(s) "{{{
 	if a:s == ''
 		let pos = col('.')
 	else 
@@ -926,19 +872,25 @@ function! s:Do_font_family(s)
 	endif
 	let b:complete_suggest = {'suggest': s:other_values['font-family'], 'complete': function('s:Normal_values_complete')}
 	return pos
+endfun "}}}
+
+function! s:Is_twoline(s)
+	return (col('.')-1) < strlen(a:s)
 endfun
 
-function! s:In_values_is(s)
-	let matchpart = matchlist(a:s, '\([a-zA-Z][a-zA-Z-]\+\)\s*:\s*\([^:}{;]*\)$')
+function! s:Pos(s)
+	return col('.') - strlen(a:s)
+endfun
+
+function! s:In_values_is(s) "{{{
+	let matchpart = matchlist(a:s, '\v([a-zA-Z-]+)\s*:\s*([^[:}{;\]]*)$')
 	if ! empty(matchpart)
 		let propertyname = tolower(matchpart[1])
-		if has_key(s:properties_value, propertyname)
-			let pos =  col('.') - strlen(matchpart[2])
-			if pos < 1
-				return 0
-			endif
+		if s:Is_twoline(matchpart[2])
+			return 0
+		elseif has_key(s:properties_value, propertyname) 
 			let b:complete_suggest = {'suggest': s:properties_value[propertyname], 'complete': function('s:Normal_values_complete')}
-			return pos
+			return s:Pos(matchpart[2])
 		elseif has_key(s:properties_value_other,propertyname)
 			return s:Is_dir4(matchpart[2], propertyname)
 		elseif index(s:properties_value_border, propertyname) > -1
@@ -956,48 +908,39 @@ function! s:In_values_is(s)
 		endif
 	endif
 	return 0
-endfun
+endfun "}}}
 
 
-
-function! s:In_properties_is(s)
-	let matchpart = matchlist(a:s, '{\([^}{]*;\|\)\s*\(\w*\)$')
-	if ! empty(matchpart)
-		let pos =  col('.') - strlen(matchpart[2])
-		if pos < 1
-			return 0
-		endif
+function! s:In_properties_is(s) "{{{
+	let matchpart = matchlist(a:s, '\v[;{]\s*([a-zA-Z-]*)$')
+	if ! empty(matchpart) && ! s:Is_twoline(matchpart[1])
 		let b:complete_suggest = {'suggest': s:properties, 'complete': function('s:Normal_values_complete')}
-		return pos
+		return s:Pos(matchpart[1])
 	endif
 	return 0
-endfun
+endfun "}}}
 
-function! s:In_pseudos_is(s)
-	let matchpart = matchlist(a:s, '\(}\|^\)[^{}]\{-}\w\+:\(\w*\)$')
-	if ! empty(matchpart)
-		let pos =  col('.') - strlen(matchpart[2])
-		if pos < 1
-			return 0
-		endif
+function! s:In_pseudos_is(s) "{{{
+	let matchpart = matchlist(a:s, '\v(}|^)[^{};]*\w+:([a-zA-Z-]*)$')
+	if ! empty(matchpart) && ! s:Is_twoline(matchpart[2])
 		let b:complete_suggest = {'suggest': s:pesudos, 'complete': function('s:Normal_values_complete')}
-		return pos
+		return s:Pos(matchpart[2])
 	endif
 	return 0
-endfun
+endfun "}}}
 
-function! s:Py_htmltag()
+function! s:Py_htmltag()	"{{{
 python << EOF
 import re
-class Myset(set):
+class Myset(set):	#{{{
     def add(self,item):
         if item:
             super(Myset,self).add(item)
     def __repr__(self):
         a=list(self)
 	a.sort()
-	return repr(a)
-class Mydict(dict):
+	return repr(a) 	#}}}
+class Mydict(dict):	#"{{{
     def add(self,item,value):
         if value:
             if not self.has_key(item):
@@ -1006,9 +949,9 @@ class Mydict(dict):
     def union(self,other):
         for key in other:
             for x in other[key]:
-                self.add(key,x)
+                self.add(key,x)	#"}}}
 
-class G(object):
+class G(object):	#"{{{
     def __init__(self):
         self.tags=Mydict()
         self.idtags=Myset()
@@ -1023,9 +966,9 @@ class G(object):
         self.classhtmltags.union(other.classhtmltags)
     @staticmethod
     def getid():
-        return list(G.g.idtags)
+        return list(G.g.idtags)	#"}}}
 
-def taghtml(s):
+def taghtml(s):	#{{{
     r=G()
     for x in re.findall(r'<\s*\w+[^>]*>',s):
         x=x[1:-1]
@@ -1039,10 +982,10 @@ def taghtml(s):
         properties.pop('class','')
         for x in properties:
             r.tags.add(tag,x)
-    return r
+    return r	#}}}
 
 
-def cssmain(*arg):
+def cssmain(*arg):	#{{{
     from glob import glob
     import vim,os
     os.chdir(vim.eval('expand("%:p:h")'))
@@ -1056,14 +999,15 @@ def cssmain(*arg):
     vim.command('let b:select_idwithnodetags=' + repr(g.idhtmltags))
     vim.command('let b:select_classtags=' + repr(g.classtags))
     vim.command('let b:select_classwithnodetags=' + repr(g.classhtmltags))
+    #}}}
 EOF
-endfun
+endfun"}}}
 
 call s:Py_htmltag()
 
 let b:select_pyrun = 0
 
-function! g:Cssaddusehtml(f, ...)
+function! g:Cssaddusehtml(f, ...)	"{{{
     let s = '"' . a:f . '"'
     let i = 1
     while i <= a:0
@@ -1072,9 +1016,9 @@ function! g:Cssaddusehtml(f, ...)
     endwhile
     execute "python cssmain(" . s . ")"
     let b:select_pyrun = 1
-endfun
+endfun	"}}}
 
-function! s:Tag_values_complete(partstr) 
+function! s:Tag_values_complete(partstr) "{{{
 	let output = []
 	for name in b:complete_suggest.suggest
 		if name =~ '^' . a:partstr
@@ -1087,9 +1031,9 @@ function! s:Tag_values_complete(partstr)
 		endfor
 	endif
 	return output
-endfun
+endfun	"}}}
 
-function! s:In_htmlproperty_is(s)
+function! s:In_htmlproperty_is(s)	"{{{
 	let matchpart = matchlist(a:s, '\(}\|^\)[^{}]\{-}\(\w\+\)\[\(\w*\)$')
 	if ! empty(matchpart)
 		let pos =  col('.') - strlen(matchpart[3])
@@ -1100,9 +1044,9 @@ function! s:In_htmlproperty_is(s)
 		return pos
 	endif
 	return 0
-endfun
+endfun	"}}}
 
-function! s:In_class_is(s)
+function! s:In_class_is(s) "{{{
 	let matchpart = matchlist(a:s, '\(}\|^\)[^{}]\{-}\(\w\+\)\.\(\w*\)$')
 	if ! empty(matchpart)
 		let pos =  col('.') - strlen(matchpart[3])
@@ -1113,9 +1057,9 @@ function! s:In_class_is(s)
 		return pos
 	endif
 	return 0
-endfun
+endfun	"}}}
     
-function! s:In_class1_is(s)
+function! s:In_class1_is(s)	"{{{
 	let matchpart = matchlist(a:s, '\(}\|^\)[^{}]*\.\(\w*\)$')
 	if ! empty(matchpart)
 		let pos =  col('.') - strlen(matchpart[2])
@@ -1126,9 +1070,9 @@ function! s:In_class1_is(s)
 		return pos
 	endif
 	return 0
-endfun
+endfun	"}}}
 
-function! s:In_id_is(s)
+function! s:In_id_is(s)	"{{{
 	let matchpart = matchlist(a:s, '\(}\|^\)[^{}]\{-}\(\w\+\)#\(\w*\)$')
 	if ! empty(matchpart)
 		let pos =  col('.') - strlen(matchpart[3])
@@ -1139,9 +1083,9 @@ function! s:In_id_is(s)
 		return pos
 	endif
 	return 0
-endfun
+endfun	"}}}
     
-function! s:In_id1_is(s)
+function! s:In_id1_is(s)	"{{{
 	let matchpart = matchlist(a:s, '\(}\|^\)[^{}]*#\(\w*\)$')
 	if ! empty(matchpart)
 		let pos =  col('.') - strlen(matchpart[2])
@@ -1152,11 +1096,11 @@ function! s:In_id1_is(s)
 		return pos
 	endif
 	return 0
-endfun
+endfun	"}}}
 
-function! g:CssComplete(findstart, base)
+function! g:CssComplete(findstart, base)	"{{{
     if a:findstart
-	    let curline = strpart(getline('.'), 0, col('.'))
+	    let curline = strpart(getline('.'), 0, col('.')-1)
 	    let pos = s:In_values_is(curline)
 	    if ! pos
 		    let pos = s:In_properties_is(curline)
@@ -1184,8 +1128,6 @@ function! g:CssComplete(findstart, base)
 	    if ! pos
 		    let curline = getline(prevnonblank(line('.') - 1)) . ' ' . curline
 		    let pos = s:In_values_is(curline)
-	    endif
-	    if ! pos
 		    let pos = s:In_properties_is(curline)
 	    endif
 	    if ! pos
@@ -1216,7 +1158,7 @@ function! g:CssComplete(findstart, base)
     else
 	    return b:complete_suggest.complete(a:base)
     endif
-endfun
+endfun	"}}}
 
 set completefunc=g:CssComplete
 

@@ -1,684 +1,1417 @@
-Array
-Boolean
-Components
-DOM
-DOMMouseScroll
-Date
-Error
-EvalError
-Function
-Image
-Infinity
-LN10
-LN2
-LOG10E
-LOG2E
-MAX_VALUE
-MIN_VALUE
-Math
-NEGATIVE_INFINITY
-NaN
-Number
-Object
-PI
-POSITIVE_INFINITY
-RangeError
-ReferenceError
-RegExp
-SQRT1_2
-SQRT2
-String
-SyntaxError
-TypeError
-URIError
-URL
-UTC
-__defineGetter__
-__defineSetter__
-__lookupGetter__
-__lookupSetter__
-_content
-abs
-acceptCharset
-acos
-action
-addEventListener
-addRange
-alert
-align
-alinkColor
-all
-alt
-altKey
-anchor
-anchorNode
-anchorOffset
-anchors
-appCodeName
-appMinorVersion
-appName
-appVersion
-appendChild
-applets
-apply
-arguments
-arity
-asin
-assign
-atan
-atan2
-atob
-attributes
-availHeight
-availLeft
-availTop
-availWidth
-back
-backgroundColor
-bgColor
-bgColorDeprecated
-big
-blink
-blur
-body
-bold
-border
-borderBottom
-borderBottomColor
-borderBottomStyle
-borderBottomWidth
-borderColor
-borderLeft
-borderLeftColor
-borderLeftStyle
-borderLeftWidth
-borderRight
-borderRightColor
-borderRightStyle
-borderRightWidth
-borderStyle
-borderTop
-borderTopColor
-borderTopStyle
-borderTopWidth
-borderWidth
-break
-browserLanguage
-btoa
-bubbles
-bufferDepth
-button
-call
-caller
-cancelBubble
-cancelable
-caption
-captureEvents
-case
-catch
-ceil
-cellPadding
-cellSpacing
-charAt
-charCode
-charCodeAt
-characterSet
-charset
-childNodes
-className
-clear
-clearInterval
-clearTimeout
-click
-clientHeight
-clientLeft
-clientTop
-clientWidth
-clientX
-clientY
-cloneNode
-close
-closed
-collapse
-collapseToEnd
-collapseToStart
-color
-colorDepth
-compatMode
-complete
-concat
-confirm
-const
-constructor
-containsNode
-content
-continue
-controllers
-cookie
-cookieEnabled
-cos
-cpuClass
-createAttribute
-createCaption
-createDocumentFragment
-createElement
-createElementNS
-createEvent
-createNSResolver
-createRange
-createTFoot
-createTHead
-createTextNode
-crypto
-ctrlKey
-current
-currentTarget
-decodeURI
-decodeURIComponent
-default
-defaultCharset
-defaultStatus
-defaultView
-delete
-deleteCaption
-deleteFromDocument
-deleteRow
-deleteTFoot
-deleteTHead
-description
-designMode
-detail
-deviceXDPI
-deviceYDPI
-dir
-directories
-dispatchEvent
-display
-do
-doctype
-document
-documentElement
-domain
-dump
-elements
-else
-embeds
-encodeURI
-encodeURIComponent
-encoding
-enctype
-escape
-eval
-evaluate
-event
-eventPhase
-every
-exec
-execCommand
-exp
-explicitOriginalTarget
-export
-extend
-fgColor
-fileName
-filter
-finally
-find
-firstChild
-fixed
-floor
-focus
-focusNode
-focusOffset
-font
-fontFamily
-fontSize
-fontSmoothingEnabled
-fontStretch
-fontStyle
-fontVariant
-fontWeight
-fontcolor
-fontsize
-for
-forEach
-forms
-forward
-frame
-frameElement
-frames
-fromCharCode
-fromElement
-function
-galleryImg
-getAttention
-getAttribute
-getAttributeNS
-getAttributeNode
-getAttributeNodeNS
-getComputedStyle
-getDate
-getDay
-getElementById
-getElementsByName
-getElementsByTagName
-getElementsByTagNameNS
-getFullYear
-getHours
-getMilliseconds
-getMinutes
-getMonth
-getRangeAt
-getSeconds
-getSelection
-getTime
-getTimezoneOffset
-getUTCDate
-getUTCDay
-getUTCFullYear
-getUTCHours
-getUTCMilliseconds
-getUTCMinutes
-getUTCMonth
-getUTCSeconds
-getYear
-global
-go
-hasAttribute
-hasAttributeNS
-hasAttributes
-hasChildNodes
-hasOwnProperty
-hash
-height
-history
-home
-host
-hostname
-href
-hspace
-id
-if
-ignoreCase
-images
-implementation
-import
-importNode
-in
-index
-indexOf
-initEvent
-initKeyEvent
-initMouseEvent
-initUIEvent
-innerHTML
-innerHeight
-innerWidth
-input
-insertBefore
-insertRow
-instanceof
-isChar
-isCollapsed
-isFinite
-isMap
-isNaN
-isPrototypeOf
-italics
-item
-javaEnabled
-join
-keyCode
-label
-lang
-language
-lastChild
-lastIndex
-lastIndexOf
-lastModified
-layerX
-layerY
-left
-length
-lineNumber
-link
-linkColor
-links
-loadOverlay
-localName
-location
-locationbar
-log
-logicalXDPI
-logicalYDPI
-lowsrc
-map
-match
-max
-menubar
-message
-metaKey
-method
-mimeTypes
-min
-moveBy
-moveTo
-multiline
-name
-nameProp
-namespaceURI
-navigate
-navigator
-new
-nextSibling
-nodeName
-nodeType
-nodeValue
-normalize
-now
-number
-offsetHeight
-offsetLeft
-offsetParent
-offsetTop
-offsetWidth
-offsetX
-offsetY
-onAbort
-onAfterPrint
-onBeforeCopy
-onBeforeCut
-onBeforePaste
-onBeforePrint
-onBeforeUnload
-onBlur
-onChange
-onClick
-onContextMenu
-onCopy
-onCut
-onDblClick
-onDrag
-onDragEnd
-onDragEnter
-onDragLeave
-onDragOver
-onDragStart
-onDrop
-onError
-onFinish
-onFocus
-onFocusIn
-onFocusOut
-onHelp
-onKeyDown
-onKeyPress
-onKeyUp
-onLine
-onLoad
-onMouseDown
-onMouseEnter
-onMouseLeave
-onMouseMove
-onMouseOut
-onMouseOver
-onMouseUp
-onMouseWheel
-onMove
-onMoveEnd
-onMoveStart
-onPaste
-onReadyStateChange
-onReset
-onResize
-onResizeEnd
-onResizeStart
-onScroll
-onSelect
-onSelectStart
-onSelectionChange
-onStart
-onStop
-onSubmit
-onUnload
-onabort
-onblur
-onchange
-onclick
-onclose
-ondblclick
-ondragdrop
-onerror
-onfocus
-onkeydown
-onkeypress
-onkeyup
-onload
-onmousedown
-onmousemove
-onmouseout
-onmouseover
-onmouseup
-onpaint
-onreset
-onresize
-onscroll
-onselect
-onsubmit
-onunload
-open
-openDialog
-opener
-opera
-opsProfile
-originalTarget
-oscpu
-outerHeight
-outerWidth
-ownerDocument
-pageX
-pageXOffset
-pageY
-pageYOffset
-parent
-parentNode
-parse
-parseFloat
-parseInt
-pathname
-personalbar
-pixelDepth
-pkcs11
-platform
-plugins
-pop
-port
-pow
-preference
-prefix
-preventBubble
-preventCapture
-preventDefault
-previousSibling
-print
-product
-productSub
-prompt
-propertyIsEnumerable
-propertyName
-protocol
-prototype
-push
-queryCommandEnabled
-queryCommandIndeterm
-queryCommandState
-queryCommandValue
-random
-rangeCount
-reduce
-reduceRight
-referrer
-relatedTarget
-releaseEvents
-reload
-removeAllRanges
-removeAttribute
-removeAttributeNS
-removeAttributeNode
-removeChild
-removeEventListener
-removeRange
-replace
-replaceChild
-reset
-resizeBy
-resizeTo
-return
-reverse
-round
-rows
-rules
-screen
-screenLeft
-screenTop
-screenX
-screenY
-scroll
-scrollBy
-scrollByLines
-scrollByPages
-scrollHeight
-scrollIntoView
-scrollLeft
-scrollMaxX
-scrollMaxY
-scrollTo
-scrollTop
-scrollWidth
-scrollX
-scrollY
-scrollbars
-search
-securityPolicy
-selectAllChildren
-selectionLanguageChange
-self
-setAttribute
-setAttributeNS
-setAttributeNode
-setAttributeNodeNS
-setDate
-setFullYear
-setHours
-setInterval
-setMilliseconds
-setMinutes
-setMonth
-setSeconds
-setTime
-setTimeout
-setUTCDate
-setUTCFullYear
-setUTCHours
-setUTCMilliseconds
-setUTCMinutes
-setUTCMonth
-setUTCSeconds
-setYear
-shift
-shiftKey
-sidebar
-sin
-sizeToContent
-slice
-small
-some
-sort
-source
-sourceIndex
-splice
-split
-sqrt
-src
-srcElement
-stack
-status
-statusbar
-stop
-stopPropagation
-strike
-style
-styleSheets
-sub
-submit
-substr
-substring
-summary
-sup
-supports
-switch
-systemLanguage
-tBodies
-tFoot
-tHead
-tabIndex
-tagName
-taintEnabled
-tan
-target
-test
-textContent
-this
-throw
-timeStamp
-title
-toDateString
-toElement
-toExponential
-toFixed
-toGMTString
-toLocaleDateString
-toLocaleLowerCase
-toLocaleString
-toLocaleTimeString
-toLocaleUpperCase
-toLowerCase
-toPrecision
-toSource
-toString
-toTimeString
-toUTCString
-toUpperCase
-toolbar
-top
-try
-type
-typeof
-undefined
-unescape
-uniqueID
-unshift
-unwatch
-updateCommands
-updateInterval
-useMap
-userAgent
-userLanguage
-userProfile
-valueOf
-var
-vendor
-vendorSub
-view
-vlinkColor
-void
-vspace
-watch
-wheelDelta
-which
-while
-width
-window
-with
-write
-writeln
+--Reserved Words
+abstract    K
+boolean     K
+break       K
+byte        K
+case        K
+catch       K
+char        K
+class       K
+const       K
+continue    K
+debugger    K
+default     K
+delete      K
+do          K
+double      K
+else        K
+enum        K
+export      K
+extends     K
+false       K
+final       K
+finally     K
+float       K
+for         K
+function    K
+goto        K
+if          K
+implements  K
+import      K
+in          K
+instanceof  K
+int         K
+interface   K
+long        K
+native      K
+new         K
+null        K
+package     K
+private     K
+protected   K
+public      K
+return      K
+short       K
+static      K
+super       K
+switch      K
+synchronized	K
+this        K
+throw       K
+throws      K
+transient   K
+true        K
+try         K
+typeof      K
+var         K
+void        K
+volatile    K
+while       K
+with        K
+--Global functions
+decodeURI                        	G        解码某个编码的 URI。
+decodeURIComponent               	G        解码一个编码的 URI 组件。
+encodeURI                        	G        把字符串编码为 URI。
+encodeURIComponent               	G        把字符串编码为 URI 组件。
+eval                             	G        计算 JavaScript 字符串，并把它作为脚本代码来执行。
+isFinite                         	G        检查某个值是否为有穷大的数。
+isNaN                            	G        检查某个值是否是数字。
+parseFloat                       	G        解析一个字符串并返回一个浮点数。
+parseInt                         	G        解析一个字符串并返回一个整数。
+--Events
+onabort                          	E        IMG
+	图像的加载被中断。
+onbeforeunload                    E               Window,BODY
+	返回的字符串将显示为提示弹出窗口
+onblur                           	E        FORM
+	元素失去焦点。
+oncut                            	E        TEXTAREA,INPUT
+	返回false则禁止剪切
+onchange                         	E        SELECT
+	域的内容被改变。
+onclick                          	E        当用户点击某个对象时调用的事件句柄。
+onclose                          	E        Window
+	当前窗口关闭时
+oncontextmenu                    	E        当用户右击某个对象时,返回false禁止默认菜单弹出
+oncopy                           	E        返回false则禁止复制
+ondblclick                       	E        当用户双击某个对象时调用的事件句柄。
+onerror                          	E        Window,IMG
+	在加载文档或图像时发生错误。
+onfocus                          	E        FORM
+	元素获得焦点。
+onhashchange                     	E        Window,BODY
+onkeydown                        	E        window,Text,Textarea
+	某个键盘按键被按下。返回false则禁止
+onkeypress                       	E        window,Text,Textarea
+	某个键盘按键被按下并松开。返回false则禁止
+onkeyup                          	E        window,Text,Textarea
+	某个键盘按键被松开。
+onload                           	E        Window,IMG,IFRAME
+	一张页面或一幅图像完成加载。
+onmousedown                      	E        鼠标按钮被按下。
+onmousemove                      	E        鼠标被移动。
+onmouseout                       	E        鼠标从某元素移开。
+onmouseover                      	E        鼠标移到某元素之上。
+onmouseup                        	E        鼠标按键被松开。
+onoffline                        	E        BODY
+ononline                         	E        BODY
+onpaste                          	E        TEXTAREA,INPUT
+	粘贴事件，返回false则禁止
+onreset                          	E        FORM
+	重置按钮被点击。
+onresize                         	E        Window,IFRAME
+	窗口或框架被重新调整大小。
+onselect                         	E        TEXTAREA,PASSWORD,TEXT
+	文本被选中
+onsubmit                         	E        FORM
+	确认按钮被点击。
+onunload                         	E        Window,IFRAME
+	用户退出页面
+------------
+XMLHttpRequest  T XMLHttpRequest
+readyState	            	        P        XMLHttpRequest
+	0: 请求未初始化
+	1: 服务器连接已建立
+	2: 请求已接收
+	3: 请求处理中
+	4: 请求已完成，且响应已就绪
+responseText                 		P        XMLHttpRequest
+responseXML                      	P        XMLHttpRequest
+overrideMimeType                	M        XMLHttpRequest
+	'text/xml' or 'text/xml'..
+status                           	P        XMLHttpRequest
+	200,404..
+statusText                       	P	 XMLHttpRequest
+	200: "Ok"
+	301: "Moved Permanently"
+	304: "Not Modified" (page hasn't been modified)
+	404: "Not Found"
+	403: "Forbidden"
+	401: "Unauthorized" (wrong password)
+onreadystatechange               	E        XMLHttpRequest
+onprogress                       	E	 XMLHttpRequest
+position                         	P	 XMLHttpRequest progress_eventobj
+totalSize                        	P	 XMLHttpRequest progress_eventobj
+abort                            	M	 XMLHttpRequest
+open                             	M	 XMLHttpRequest
+	open(method, url, [[async], [username], [password])
+	* method：请求的类型；GET 或 POST
+	* url：文件在服务器上的位置
+	* async：true（异步）或 false（同步）
+	* username
+	* password
+send                             	M	 XMLHttpRequest
+	send([string])
+	* string: 仅用于 POST 请求
+getResponseHeader                	M	 XMLHttpRequest
+	getResponseHeader(header)
+	* header: "Content-Type"...
+getAllResponseHeaders            	M	 XMLHttpRequest
+setRequestHeader                 	M	 XMLHttpRequest
+	setRequestHeader(header, value)
+	eq: setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+Boolean T
+Object	T
+constructor                      	P	 Object
+hasOwnProperty                   	M	 Object
+prototype                        	P	 Object
+isPrototypeOf                    	M	 Object.prototype
+propertyIsEnumerable             	M	 Object
+toString                         	M	 Object
+valueOf                          	M	 Object
+Function	T
+arguments                        	P	 Function
+callee                           	P	 Function.arguments
+	用于递归
+length                           	P	 Function.arguments
+	获取的参数个数
+caller                           	P	 Function
+length                           	P	 Function
+	定义的参数个数
+apply                            	M	 Function
+call                             	M	 Function
+String		T
+length                           	P	 String
+anchor                           	M	 String
+	<A name="name">
+big                              	M	 String
+	<BIG>string</BIG>
+blink                            	M	 String
+	<blink>闪烁</blink>
+bold                             	M	 String
+	<B>bold</B>
+fixed                            	M	 String
+	<TT>string</TT>
+fontcolor                        	M	 String
+	<font color="arg">string</font>
+fontsize                         	M	 String
+	<font size="arg">string</font>
+italics                          	M	 String
+	<i>string</i>
+link                             	M	 String
+	<a href="arg">string</a>
+small                            	M	 String
+	<small>string</small>
+strike                           	M	 String
+	<strike>横线</strike>
+sub                              	M	 String
+	<sub>下标</sub>
+sup                              	M	 String
+	<sup>上标</sup>
+charAt                           	M	 String
+ 	返回在指定位置的字符
+charCodeAt                       	M	 String
+	返回在指定的位置的字符的 Unicode 编码
+concat                           	M	 String
+	连接字符串
+fromCharCode                     	M	 String
+	String.fromCharCode(x1,x2..)
+	从字符编码创建一个字符串
+indexOf                          	M	 String
+	indexOf(substr,[start])
+	检索字符串
+	未找到返回 -1
+lastIndexOf                      	M	 String
+	lastIndexOf(substr,[start])
+	从后向前搜索字符串
+	未找到返回 -1
+localeCompare                    	M	 String
+	用本地特定的顺序来比较两个字符串
+match                            	M	 String
+	找到一个或多个正在表达式的匹配
+	未找到返回 null 找到返回[s1,s2...]
+replace                          	M	 String
+	replace(re,xx)
+	替换与正则表达式匹配的子串
+	xx可为函数，如
+		function html2entities(sometext){
+		 var re=/[(<>"'&]/g
+		 arguments[i].value=sometext.replace(re, function(m){return replacechar(m)})
+		}
+		function replacechar(match){
+		 if (match=="<")
+		  return "&lt;"
+		 else if (match==">")
+		  return "&gt;"
+		 else if (match=="\"")
+		  return "&quot;"
+		 else if (match=="'")
+		  return "&#039;"
+		 else if (match=="&")
+		  return "&amp;"
+		}
+search                           	M	 String
+	检索与正则表达式相匹配的值
+	未找到返回 -1
+slice                            	M	 String
+	slice(start,[end])
+	提取字符串的片断，并在新的字符串中返回被提取的部分
+split                            	M	 String
+	split(delimiter,[limit])
+	把字符串分割为字符串数组
+substr                           	M	 String
+	substr(start,[length])
+	从起始索引号提取字符串中指定数目的字符
+substring                        	M	 String
+	substring(from,[to])
+	提取字符串中两个指定的索引号之间的字符
+toLocaleLowerCase                	M	 String
+toLocaleUpperCase                	M	 String
+toLowerCase                      	M	 String
+	把字符串转换为小写
+toUpperCase                      	M	 String
+	把字符串转换为大写
+trim                             	M	 String
+RegExp	T
+global                           	P	 RegExp
+	全局标志/g
+ignoreCase                       	P	 RegExp
+	忽略大小写/i
+lastIndex                        	P	 RegExp
+	下一次搜索开始的位置
+multiline                        	P	 RegExp
+	多行模式/m
+source                           	P	 RegExp
+	字面形式
+exec                             	M	 RegExp
+	返回匹配各项的数组
+index                            	P	 RegExp.exec
+input                            	P	 RegExp.exec
+	要匹配的字符串
+test                             	M	 RegExp
+	 测试是否匹配
+input                                   P        RegExp
+	RegExp.input $_
+	最后一次要匹配的字符串
+lastMatch                        	P	 RegExp
+	RegExp.lastMatch $&
+	最后一次的匹配项
+lastParen                        	P        RegExp
+	RegExp.lastParen $+
+	最后一次的匹配捕获组
+leftContext	                        P        RegExp
+	RegExp.leftContext $`
+	匹配左边的文本
+multiline                     		P        RegExp
+	是否所有表达式都使用多行模式
+rightContext                     	P        RegExp
+	RegExp.rightContext $`
+	匹配右边的文本
+Number	T
+NaN                              	C	 Number
+toExponential                   	M        Number
+	转换为指数计数字符串
+toPrecision                      	M        Number
+	转换为指数计数字符串
+toString                         	M	 Number
+	可指定进制
+toFixed                          	M	 Number
+	转换为指定小数位长度的字符串
+Math	T
+E					C        Math
+LN2                              	C	 Math
+LN10                             	C	 Math
+LOG2E                            	C	 Math
+LOG10E                           	C	 Math
+PI                               	C	 Math
+SQRT1_2                          	C	 Math
+	2的平方根倒数
+SQRT2                            	C	 Math
+abs                              	M	 Math
+	绝对值
+acos                             	M	 Math
+	返回数的反余弦值
+asin                             	M	 Math
+	返回数的反正弦值
+atan                             	M	 Math
+	以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值
+atan2                            	M	 Math
+	atan2(y,x)
+	返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）
+ceil                             	M	 Math
+	对数进行上舍入
+cos                              	M	 Math
+	返回数的余弦
+exp                              	M	 Math
+	返回e的指数
+floor                            	M	 Math
+	对数进行下舍入
+log                              	M	 Math
+	返回数的自然对数（底为e）
+max                              	M	 Math
+	返回 x 和 y 中的最高值
+min                              	M	 Math
+	返回 x 和 y 中的最低值
+pow                              	M	 Math
+	返回 x 的 y 次幂
+random                           	M	 Math
+	返回 0 ~ 1 之间的随机数
+round                            	M	 Math
+	把数四舍五入为最接近的整数
+sin                              	M	 Math
+	返回数的正弦
+sqrt                             	M	 Math
+	返回数的平方根
+tan                              	M	 Math
+	返回角的正切
+Array	T
+length                           	P	 Array
+concat                           	M	 Array
+	连接两个或更多的数组，并返回结果
+join                             	M	 Array
+	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔
+pop                              	M	 Array
+	删除并返回数组的最后一个元素
+push                             	M	 Array
+	向数组的末尾添加一个或更多元素，并返回新的长度
+reverse                          	M	 Array
+	颠倒数组中元素的顺序
+shift                            	M	 Array
+	删除并返回数组的第一个元素
+slice                            	M	 Array
+	slice(start,[end])
+	从某个已有的数组返回选定的元素
+sort                             	M	 Array
+	sort([func])
+	对数组的元素进行排序
+splice                           	M	 Array
+	splice(startindex,[howmany],[v1,...])
+	删除元素，并向数组添加新元素
+unshift                          	M	 Array
+	向数组的开头添加一个或更多元素，并返回新的长度
+every                            	M	 Array
+	every(func)
+	func=function xx(element,index,array) {return test;}
+	返回真假
+filter                           	M	 Array
+	filter(func)
+	func=function xx(element,index,array) {return test;}
+	返回列表
+foreach                          	M	 Array
+	every(func)
+	func=function xx(element,index,array)
+indexOf                          	M	 Array
+	indexOf(target,[start])
+lastIndexOf                      	M	 Array
+	lastIndexOf(target,[start])
+map                              	M	 Array
+	every(func)
+	func=function xx(element,index,array) {return value;}
+	返回列表
+some                             	M	 Array
+	every(func)
+	func=function xx(element,index,array) {return test;}
+	返回真假
+Date	T
+	today=new Date()
+	new Date(milliseconds)
+	new Date(dateString)
+	new Date(year, month, day, hours, minutes, seconds, milliseconds)
+getDate                          	M	 Date
+	从 Date 对象返回一个月中的某一天 (1 ~ 31)
+getDay                           	M	 Date
+	从 Date 对象返回一周中的某一天 (0 ~ 6)
+getMonth                         	M	 Date
+	从 Date 对象返回月份 (0 ~ 11)
+getFullYear                      	M	 Date
+	从 Date 对象以四位数字返回年份
+getHours                         	M	 Date
+	返回 Date 对象的小时 (0 ~ 23)
+getMinutes                       	M	 Date
+	返回 Date 对象的分钟 (0 ~ 59)
+getSeconds                       	M	 Date
+	返回 Date 对象的秒数 (0 ~ 59)
+getMilliseconds                  	M	 Date
+	返回 Date 对象的毫秒(0 ~ 999)
+getTime                          	M	 Date
+	返回 1970 年 1 月 1 日至今的毫秒数
+getTimezoneOffset                	M	 Date
+	返回本地时间与格林威治标准时间 (GMT) 的分钟差
+getUTCDate                       	M	 Date
+	根据世界时从 Date 对象返回月中的一天 (1 ~ 31)
+getUTCDay                        	M	 Date
+	根据世界时从 Date 对象返回周中的一天 (0 ~ 6)
+getUTCMonth                      	M	 Date
+	根据世界时从 Date 对象返回月份 (0 ~ 11)
+getUTCFullYear                   	M	 Date
+	根据世界时从 Date 对象返回四位数的年份
+getUTCHours                      	M	 Date
+	根据世界时返回 Date 对象的小时 (0 ~ 23)
+getUTCMinutes                    	M	 Date
+	根据世界时返回 Date 对象的分钟 (0 ~ 59)
+getUTCSeconds                    	M	 Date
+	根据世界时返回 Date 对象的秒钟 (0 ~ 59)
+getUTCMilliseconds               	M	 Date
+	根据世界时返回 Date 对象的毫秒(0 ~ 999)
+parse                            	M	 Date
+	parse(string)
+	返回1970年1月1日午夜到指定日期（字符串）的毫秒数
+	可通过此来检验时间字符串是否有效，无效返回NaN
+setDate                          	M	 Date
+	设置 Date 对象中月的某一天 (1 ~ 31)
+setMonth                         	M	 Date
+	设置 Date 对象中月份 (0 ~ 11)
+setFullYear                      	M	 Date
+	设置 Date 对象中的年份（四位数字）
+setHours                         	M	 Date
+	setHours(hours, [minutes], [seconds], [millisec])
+	设置 Date 对象中的小时 (0 ~ 23)
+setMinutes                       	M	 Date
+	setMinutes(minutes, [seconds], [millisec])
+	设置 Date 对象中的分钟 (0 ~ 59)
+setSeconds                       	M	 Date
+	setSeconds(seconds, [millisec])
+	设置 Date 对象中的秒钟 (0 ~ 59)
+setMilliseconds                  	M	 Date
+	设置 Date 对象中的毫秒 (0 ~ 999)
+setTime                          	M	 Date
+	以毫秒设置 Date 对象(从1970／1／1）
+setUTCDate                       	M	 Date
+	根据世界时设置 Date 对象中月份的一天 (1 ~ 31)
+setUTCMonth                      	M	 Date
+	根据世界时设置 Date 对象中的月份 (0 ~ 11)
+setUTCFullYear                   	M	 Date
+	根据世界时设置 Date 对象中的年份（四位数字）
+setUTCHours                      	M	 Date
+	根据世界时设置 Date 对象中的小时 (0 ~ 23)
+setUTCMinutes                    	M	 Date
+	根据世界时设置 Date 对象中的分钟 (0 ~ 59)
+setUTCSeconds                    	M	 Date
+	根据世界时设置 Date 对象中的秒钟 (0 ~ 59)
+setUTCMilliseconds               	M	 Date
+	根据世界时设置 Date 对象中的毫秒 (0 ~ 999)
+toString                         	M	 Date
+	把 Date 对象转换为字符串
+toDateString                     	M	 Date
+	把 Date 对象的日期部分转换为字符串
+toUTCString                      	M	 Date
+	根据世界时，把 Date 对象转换为字符串
+toLocaleString                   	M	 Date
+	根据本地时间格式，把 Date 对象转换为字符串
+toLocaleTimeString               	M	 Date
+	根据本地时间格式，把 Date 对象的时间部分转换为字符串
+toLocaleDateString               	M	 Date
+	根据本地时间格式，把 Date 对象的日期部分转换为字符串
+UTC                              	M	 Date
+	UTC(year,month,day,hours,minutes,seconds,ms)
+	根据世界时返回 1997 年 1 月 1 日 到指定日期的毫秒数
+window	G
+closed                           	G	 window
+	返回窗口是否已被关闭
+defaultStatus                    	G	 window
+	设置或返回窗口状态栏中的默认文本
+document                         	G	 window
+	对 Document 对象的只读引用。请参阅 Document 对象
+history                          	G	 window
+	对 History 对象的只读引用。请参数 History 对象
+innerHeight                      	G	 window
+	返回窗口的文档显示区的高度
+innerWidth                       	G	 window
+	返回窗口的文档显示区的宽度
+length                           	G	 window
+	设置或返回窗口中的框架数量
+location                         	G	 window
+	用于窗口或框架的 Location 对象。请参阅 Location 对象
+name                             	G	 window
+	设置或返回窗口的名称
+Navigator                        	G	 window
+	对 Navigator 对象的只读引用。请参数 Navigator 对象
+opener                           	G	 window
+	返回对创建此窗口的窗口的引用
+outerHeight                      	G	 window
+	返回窗口的外部高度
+outerWidth                       	G	 window
+	返回窗口的外部宽度
+parent                           	G	 window
+	返回父窗口
+Screen                           	G	 window
+	对 Screen 对象的只读引用。请参数 Screen 对象
+self                             	G	 window
+	返回对当前窗口的引用。等价于 Window 属性
+status                           	G	 window
+	设置窗口状态栏的文本
+top                              	G	 window
+	返回最顶层的先辈窗口
+screenX                          	G	 window
+	窗口的左上角在屏幕上的的 x 坐标
+screenY                          	G	 window
+	窗口的左上角在屏幕上的的 y 坐标
+pageXOffset                      	G	 window
+	滚动视口所在的X坐标
+pageYOffset                      	G	 window
+	滚动视口所在的Y坐标
+frames                           	G	 window
+	所有IFRAME对象组
+alert                            	M	 window
+	显示带有一段消息和一个确认按钮的警告框
+blur                             	M	 window
+	把键盘焦点从顶层窗口移开
+clearInterval                    	M	 window
+	取消由 setInterval() 设置的 timeout
+clearTimeout                     	M	 window
+	取消由 setTimeout() 方法设置的 timeout
+close                            	M	 window
+	关闭浏览器窗口
+confirm                          	M	 window
+	显示带有一段消息以及确认按钮和取消按钮的对话框
+focus                            	M	 window
+	把键盘焦点给予一个窗口
+moveBy                           	M	 window
+	可相对窗口的当前坐标把它移动指定的像素
+moveTo                           	M	 window
+	把窗口的左上角移动到一个指定的坐标
+open                             	M	 window
+	open(URL, [name], [features], [replace])
+	打开一个新的浏览器窗口或查找一个已命名的窗口
+	directories=yes|no|1|0 	是否添加目录按钮。默认为 yes。
+	height=pixels 		窗口文档显示区的高度。以像素计。
+	location=yes|no|1|0 	是否显示地址字段。默认是 yes。
+	menubar=yes|no|1|0 	是否显示菜单栏。默认是 yes。
+	resizable=yes|no|1|0 	窗口是否可调节尺寸。默认是 yes。
+	scrollbars=yes|no|1|0 	是否显示滚动条。默认是 yes。
+	status=yes|no|1|0 	是否添加状态栏。默认是 yes。
+	titlebar=yes|no|1|0 	是否显示标题栏。默认是 yes。
+	toolbar=yes|no|1|0 	是否显示浏览器的工具栏。默认是 yes。
+	width=pixels 		窗口的文档显示区的宽度。以像素计。
+print                            	M	 window
+	打印当前窗口的内容
+prompt                           	M	 window
+	显示可提示用户输入的对话框
+resizeBy                         	M	 window
+	按照指定的像素调整窗口的大小
+resizeTo                         	M	 window
+	把窗口的大小调整到指定的宽度和高度
+scrollBy                         	M	 window
+	按照指定的像素值来滚动内容
+scrollTo                         	M	 window
+	把内容滚动到指定的坐标
+setInterval                      	M	 window
+	setInterval(func, interval, [args])
+	按照指定的周期（以毫秒计）来调用函数或计算表达式
+setTimeout                       	M	 window
+	setTimeout(func, interval, [args])
+	在指定的毫秒数后调用函数或计算表达式。
+Navigator	T
+appCodeName                      	P	 Navigator
+	返回浏览器的代码名
+appMinorVersion                  	P	 Navigator
+	返回浏览器的次级版本
+appName                          	P	 Navigator
+	返回浏览器的名称
+appVersion                       	P	 Navigator
+	返回浏览器的平台和版本信息
+Language                         	P	 Navigator
+	返回当前浏览器的语言
+cookieEnabled                    	P	 Navigator
+	返回指明浏览器中是否启用 cookie 的布尔值
+platform                         	P	 Navigator
+	返回运行浏览器的操作系统平台
+userAgent                        	P	 Navigator
+	返回由客户机发送服务器的 user-agent 头部的值
+plugins                          	P	 Navigator
+mimeTypes                        	P	 Navigator
+javaEnabled                      	M	 Navigator
+Screen		T
+availHeight                      	P	 Screen
+	返回显示屏幕的高度 (除 Windows 任务栏之外)
+availWidth                       	P	 Screen
+	返回显示屏幕的宽度 (除 Windows 任务栏之外)
+colorDepth                       	P	 Screen
+	返回目标设备或缓冲器上的调色板的比特深度
+height                           	P	 Screen
+	返回显示屏幕的高度
+pixelDepth                       	P	 Screen
+	返回显示屏幕的颜色分辨率（比特每像素）
+width                            	P	 Screen,Html
+	返回显示器屏幕的宽度
+History		T
+length                           	P	 History
+	返回浏览器历史列表中的 URL 数量
+back                             	M	 History
+	加载 history 列表中的前一个 URL
+forward                          	M	 History
+	加载 history 列表中的下一个 URL
+go                               	M	 History
+	加载 history 列表中的某个具体页面。
+	-1相当于back
+Location	T
+hash                             	P	 Location
+	设置或返回从井号 (#) 开始的 URL（锚）
+host                             	P	 Location
+	设置或返回主机名和当前 URL 的端口号
+hostname                         	P	 Location
+	设置或返回当前 URL 的主机名
+href                             	P	 Location
+	设置或返回完整的 URL
+pathname                         	P	 Location
+	设置或返回当前 URL 的路径部分
+port                             	P	 Location
+	设置或返回当前 URL 的端口号
+protocol                         	P	 Location
+	设置或返回当前 URL 的协议
+search                           	P	 Location
+	设置或返回从问号 (?) 开始的 URL（查询部分）
+reload                           	M	 Location
+	reload([forceGet])
+	重新加载当前文档
+replace                          	M	 Location
+	用新的url替换当前,打开url
+--HTML
+name                             	P	 Html
+id                               	P	 Html
+className                        	P	 Html
+title                            	P	 Html
+accessKey                        	P	 Form.elements,Area
+	设置或返回访问某个区域的快捷键
+alt                              	P	 Link,Area
+	设置或返回当浏览器无法显示某个区域时的替换文字
+coords                           	P	 Area
+	设置或返回图像映射中可点击区域的坐标
+hash                             	P	 Link,Area
+	设置或返回某个区域中 URL 的锚部分
+host                             	P	 Link,Area
+	设置或返回某个区域中 URL 的主机名和端口
+href                             	P	 Link,Area
+	设置或返回图像映射中链接的 URL
+noHref                           	P	 Area
+	设置或返回某个区域是否应是活动的还是非活动的
+pathname                         	P	 Link,Area
+	设置或返回某个区域中的 URL 的路径名
+protocol                         	P	 Link,Area
+	设置或返回某个区域中的 URL 的协议
+search                           	P	 Link,Area
+	设置或返回某个区域中 URL 的查询字符串部分
+shape                            	P	 Area
+	设置或返回图像映射中某个区域的形状
+tabIndex                         	P	 Html
+	设置或返回某个区域的 tab 键控制次序
+target                           	P	 Html
+	设置或返回在何处打开link-URL
+alt                              	P	 Image
+	设置或返回无法显示图像时的替代文本
+complete                         	P	 Image
+	返回浏览器是否已完成对图像的加载
+height                           	P	 Html,Image,IFrame
+	设置或返回高度
+hspace                           	P	 Image
+	设置或返回图像左侧和右侧的空白
+isMap                            	P	 Image
+	返回图像是否是服务器端的图像映射
+longDesc                         	P	 Image,IFrame
+	设置或返回指向包含描述的文档的 URL
+lowsrc                           	P	 Image
+	设置或返回指向图像的低分辨率版本的 URL
+src                              	P	 Image,IFrame
+	设置或返回URL
+useMap                           	P	 Image
+	设置或返回客户端图像映射的 usemap 属性的值
+vspace                           	P	 Image
+	设置或返回图像的顶部和底部的空白
+width                            	P	 Html,Image,IFrame
+	设置或返回宽度。
+elements                         	P	 Form
+	包含表单中所有元素的数组
+type                             	P	 Form.element
+	button,checkbox,file,hidden,image,password,radio,reset
+	select-one,select-multipe,submit,text,textarea
+acceptCharset                    	P	 Form
+	服务器可接受的字符集
+action                           	P	 Form
+	设置或返回表单的 action 属性
+enctype                          	P	 Form
+	设置或返回表单用来编码内容的 MIME 类型
+length                           	P	 Form
+	返回表单中的元素数目
+method                           	P	 Form
+	设置或返回将数据发送到服务器的 HTTP 方法
+reset                            	M	 Form
+	把表单的所有输入元素重置为它们的默认值
+submit                           	M	 Form
+	提交表单
+disabled                         	P	 Form.elements
+	设置或返回是否禁用
+form                             	P	 Form.elements
+	返回对包含按钮的表单的引用
+value                            	P	 Form.elements
+	设置或返回显示的文本
+checked                          	P	 Checkbox,Radio
+	设置或返回是否应被选中
+defaultChecked                   	P	 Form.elements
+	返回 checked 属性的默认值
+accept                           	P	 FileUpload
+	设置或返回指示文件传输的 MIME 类型的列表（逗号分隔）
+defaultValue                     	P	 Form.elements
+	设置或返回初始值
+maxLength                        	P	 Text,Password,Textarea
+	设置或返回字符的最大数目
+readOnly                         	P	 Form.elements
+	设置或返回是否应当是只读的
+size                             	P	 Text,Password,Textarea
+	设置或返回长度
+cols                             	P	 Textarea
+	设置或返回 textarea 的宽度
+rows                             	P	 Textarea
+	设置或返回 textarea 的高度
+select              	                M        Text,Textarea
+defaultSelected                  	P	 Option
+	返回 selected 属性的默认值
+selected                         	P	 Option
+	设置或返回 selected 属性的值
+text                             	P	 Option
+	设置或返回某个选项的纯文本值
+label                            	P	 Option
+	设置或返回标记
+multiple                         	P	 Select
+	设置或返回是否选择多个项目
+selectedIndex                    	P	 Select
+	设置或返回下拉列表中被选项目的索引号
+size                             	P	 Selct
+	设置或返回下拉列表中的可见行数
+remove                           	M	 Select
+	remove(optionindex)
+	index>=0
+	从下拉列表中删除一个选项
+add                              	M        Select
+	add(newoption, beforeoption*)
+	beforeoption为插入位置的option_obj,null加入尾部
+length                           	P	 Select
+options                          	P	 Select
+Document T
+anchors                          	P	 Document
+	返回对文档中所有 Anchor 对象的引用
+forms                            	P	 Document
+	返回对文档中所有 Form 对象引用
+images                           	P	 Document
+	返回对文档中所有 Image 对象引用
+links                            	P	 Document
+	返回对文档中所有 Area 和 Link 对象引用
+body                             	C	 Document
+	提供对 <body> 元素的直接访问。
+offsetWidth                      	P	 body
+offsetHeight                     	P	 body
+cookie                           	P	 Document
+	设置或返回与当前文档有关的所有 cookie
+domain                           	P	 Document
+	返回当前文档的域名
+lastModified                     	P	 Document
+	返回文档被最后修改的日期和时间
+referrer                         	P	 Document
+	返回载入当前文档的文档的 URL
+title                            	P	 Document
+	返回当前文档的标题
+URL                              	P	 Document
+	返回当前文档的 URL
+close                            	M	 Document
+	关闭用 document.open() 方法打开的输出流，并显示选定的数据
+getElementById                   	M	 Document
+	返回对拥有指定 id 的第一个对象的引用
+getElementsByName                	M	 Document
+	返回带有指定名称的对象集合
+getElementsByTagName             	M	 Document
+	返回带有指定标签名的对象集合
+addEventListener                 	M	 Document
+	addEventListener(eventType, listener, useCapture)
+createAttribute                  	M	 Document,Element
+	createAttribute("attributename")
+createDocumentFragment           	M	 Document
+createElement                    	M	 Document
+	createElement(tagName)
+createTextNode                   	M	 Document
+	createTextNode(text)
+elementFromPoint                 	M	 Document,Element
+	elementFromPoint(x,y)
+getComputedStyle                 	M	 Document,Element
+	getComputedStyle(elementRef, pseudoElementName)
+getElementsByClassName           	M	 Document,Element
+removeEventListener              	M	 Document,Element
+	removeEventListener(eventType, listener, useCapture)
+querySelector                    	M	 Document,Element
+	querySelector(selectors, [NSResolver])
+querySelectorAll                 	M	 Document,Element
+	querySelectorAll(selectors, [NSResolver])
+attributes                       	P	 Element
+childNodes                       	P	 Element
+children	                       	P	 Element
+namedItem				P	 Element
+clientLeft				P	 Element
+clientWidth				P	 Element
+clientTop				P	 Element
+clientHeight				P	 Element
+contentEditable				P	 Element
+textContent				P	 Element
+scrollHeight				P	 Element
+scrollWidth				P	 Element
+scrollTop				P	 Element
+scrollLeft				P	 Element
+firstChild                       	P	 Element
+firstElementChild                      	P	 Element
+innerHTML                        	P	 Element
+lastChild                        	P	 Element
+lastElementChild                       	P	 Element
+nextSibling                      	P	 Element
+nextElementSibling                     	P	 Element
+nodeName                         	P	 Element
+tagName                         	P	 Element
+nodeType                         	P	 Element
+nodeValue                        	P	 Element
+offsetLeft                       	P	 Element
+offsetTop                        	P	 Element
+offsetParent                     	P	 Element
+offsetWidth                      	P	 Element
+offsetHeight                     	P	 Element
+parentNode                       	P	 Element
+prefix                           	P	 Element
+previousSibling                  	P	 Element
+previousElementSibling                 	P	 Element
+style                            	P	 Element
+click                            	M	 Element
+appendChild                      	M	 Element
+	appendChild(node)
+cloneNode                        	M	 Element
+	cloneNode(deepBoolean)
+getAttribute                     	M	 Element
+	getAttribute(attributeName)
+getAttributeNode                 	M	 Element
+	getAttributeNode(attributeName)
+hasAttribute                     	M	 Element
+	hasAttribute(attributeName)
+hasAttributes                    	M	 Element
+hasChildNodes                    	M	 Element
+insertBefore                     	M	 Element
+	insertBefore(newElement, targetElement)
+insertAfter                      	M	 Element
+	insertAfter(newElement, targetElement)
+item                             	M	 Element
+	item(index)
+normalize                        	M	 Element
+removeAttribute                  	M	 Element
+	removeAttribute(attributeName)
+removeChild                      	M	 Element
+	removeChild(childreferece)
+replaceChild                     	M	 Element
+	replaceChild(newChild, oldChild)
+scrollIntoView                   	M	 Element
+	scrollIntoView([Boolean])
+setAttribute                     	M	 Element
+	setAttribute(attributename, value, [iecaseflag])
+setAttributeNode                 	M	 Element
+	setAttributeNode(attributereference)
+supports                         	M	 Element
+	supports(feature, [version])
+open                             	M	 Document
+	open(mimetype,["replace"])
+	打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出
+write                            	M	 Document
+	向文档写 HTML 表达式 或 JavaScript 代码
+writeln                          	M	 Document
+	等同于 write() 方法，不同的是在每个表达式之后写一个换行符。
+doctype                          	P	 Document
+documentElement                  	P	 Document
+implementation                   	P	 Document
+ownerDocument                    	P	 Document
+createTreeWalker                 	M        Document
+	createTreeWalker(root, nodesToShow, filter, entityExpandBol)
+	root   --- node
+	nodesToShow	---
+	NodeFilter.SHOW_ALL 	
+	NodeFilter.SHOW_ENTITY_REFERENCE 
+	NodeFilter.SHOW_DOCUMENT_TYPE 
+	NodeFilter.SHOW_ELEMENT 	
+	NodeFilter.SHOW_ENTITY 	
+	NodeFilter.SHOW_FRAGMENT
+	NodeFilter.SHOW_ATTRIBUTE 	
+	NodeFilter.SHOW_PROCESSING_INSTRUCTION 	
+	NodeFilter.SHOW_NOTATION
+	NodeFilter.SHOW_TEXT 	
+	NodeFilter.SHOW_COMMENT 	 
+	NodeFilter.SHOW_CDATA_SECTION 	
+	NodeFilter.SHOW_DOCUMENT	
+	filter --- null or func
+	entityExpandBol -- boolean
+currentNode                      	P	 TreeWalker
+altKey                           	P	 Event
+	返回当事件被触发时，"ALT" 是否被按下
+charCode                         	P        Event.onkeypress
+	有A-Z和a-z没有shift,ctrl
+keyCode                          	P	 Event.onkeydown,onkeyup
+	没有A-Z其他都有
+button                           	P	 Event
+	返回当事件被触发时，哪个鼠标按钮被点击
+	0左1中2右
+clientX                          	P	 Event
+	返回当事件被触发时，鼠标指针的水平坐标
+clientY                          	P	 Event
+	返回当事件被触发时，鼠标指针的垂直坐标
+layerX                           	P	 Event
+	返回相对坐标
+layerY                           	P	 Event
+	返回相对坐标
+pageX                            	P	 Event
+	window.pageXOffset+e.clientX
+pageY                            	P	 Event
+	window.pageYOffset+e.clientY
+ctrlKey                          	P	 Event
+	返回当事件被触发时，"CTRL" 键是否被按下
+metaKey                          	P	 Event
+	返回当事件被触发时，"meta" 键是否被按下
+relatedTarget                    	P	 Event.mouseover,mouseout
+	返回与事件的目标节点相关的节点
+shiftKey                         	P	 Event
+	返回当事件被触发时，"SHIFT" 键是否被按下
+bubbles                          	P	 Event
+	返回布尔值，指示事件是否是起泡事件类型
+cancelable                       	P	 Event
+	返回布尔值，指示事件是否可拥可取消的默认动作
+currentTarget                    	P	 Event
+	返回其事件监听器触发该事件的元素
+eventPhase                       	P	 Event
+	返回事件传播的当前阶段
+target                           	P	 Event
+	返回触发此事件的元素（事件的目标节点）
+timeStamp                        	P	 Event
+	返回事件生成的日期和时间
+type                             	P	 Event
+	返回当前 Event 对象表示的事件的名称
+screenX                          	P	 Event
+	在屏幕上的的 x 坐标
+screenY                          	P	 Event
+	在屏幕上的的 y 坐标
+initEvent()                      	M	 Event
+	初始化新创建的 Event 对象的属性
+preventDefault()                 	M	 Event
+	通知浏览器不要执行与事件关联的默认动作
+stopPropagation()                	M	 Event
+	不再派发事件
+cells                            	P	 Table,TableRow
+	返回包含表格中所有单元格的一个数组
+rows                             	P	 Table
+	返回包含表格中所有行的一个数组
+border                           	P	 Table
+	设置或返回表格边框的宽度
+caption                          	P	 Table
+	对表格的 <caption> 元素的引用
+cellPadding                      	P	 Table
+	设置或返回单元格内容和单元格边框之间的空白量
+cellSpacing                      	P	 Table
+	设置或返回在表格中的单元格之间的空白量
+frame                            	P	 Table
+	设置或返回表格的外部边框
+	above 	Show top border only.
+	below 	Show bottom border only.
+	border 	Show all sides of border.
+	box 	Show all sides of border.
+	hsides 	Show top and bottom borders only.
+	lhs 	Show left border only.
+	rhs 	Show right border only.
+	void 	Hide all borders (default).
+	vsides 	Show left and right borders only.
+rules                            	P	 Table
+	设置或返回表格的内部边框（行线）
+	all 	Show border around each cell.
+	cols 	Show border around columns only.
+	groups 	Show border between cell groups only (thead, tfoot, tbody, colgroup, or col elements).
+	none 	Don't show any border between cells.
+	rows 	Show border between rows only.
+summary                          	P	 Table
+	设置或返回对表格的描述（概述）
+tFoot                            	P	 Table
+	返回表格的 TFoot 对象。如果不存在该元素，则为 null
+tHead                            	P	 Table
+	返回表格的 THead 对象。如果不存在该元素，则为 null
+createCaption                    	M	 Table
+	为表格创建一个 caption 元素
+createTFoot                      	M	 Table
+	在表格中创建一个空的 tFoot 元素
+createTHead                      	M	 Table
+	在表格中创建一个空的 tHead 元素
+deleteCaption                    	M	 Table
+	从表格删除 caption 元素以及其内容
+deleteRow                        	M	 Table
+	从表格删除一行
+deleteTFoot                      	M	 Table
+	从表格删除 tFoot 元素及其内容
+deleteTHead                      	M	 Table
+	从表格删除 tHead 元素及其内容
+insertRow                        	M	 Table
+	在表格中插入一个新行。-1为最后一行
+rowIndex                         	P	 TableRow
+	返回该行在表中的位置。
+deleteCell                       	M	 TableRow
+	删除行中的指定的单元格。
+insertCell                       	M	 TableRow
+	在一行中的指定位置插入一个空的 <td> 元素。
+cellIndex                        	P	 TableCell
+	返回单元格在某行的单元格集合中的位置
+colSpan                          	P	 TableCell
+	单元格横跨的列数
+rowSpan                          	P	 TableCell
+	设置或返回单元格可横跨的行数。
+--CSS
+background                       	P	 CssStyle
+	在一行中设置所有的背景属性 	
+backgroundAttachment             	P	 CssStyle
+	设置背景图像是否固定或随页面滚动 	
+backgroundColor                  	P	 CssStyle
+	设置元素的背景颜色 	
+backgroundImage                  	P	 CssStyle
+	设置元素的背景图像 	
+backgroundPosition               	P	 CssStyle
+	设置背景图像的起始位置 
+backgroundRepeat                 	P	 CssStyle
+	设置是否及如何重复背景图像 	
+border                           	P	 CssStyle
+	在一行设置四个边框的所有属性 	
+borderBottom                     	P	 CssStyle
+	在一行设置底边框的所有属性 	
+borderBottomColor                	P	 CssStyle
+	设置底边框的颜色 	
+borderBottomStyle                	P	 CssStyle
+	设置底边框的样式 	
+borderBottomWidth                	P	 CssStyle
+	设置底边框的宽度 	
+borderColor                      	P	 CssStyle
+	设置所有四个边框的颜色 (可设置四种颜色) 	
+borderLeft                       	P	 CssStyle
+	在一行设置左边框的所有属性 	
+borderLeftColor                  	P	 CssStyle
+	设置左边框的颜色 	
+borderLeftStyle                  	P	 CssStyle
+	设置左边框的样式 	
+borderLeftWidth                  	P	 CssStyle
+	设置左边框的宽度 	
+borderRight                      	P	 CssStyle
+	在一行设置右边框的所有属性 	
+borderRightColor                 	P	 CssStyle
+	设置右边框的颜色 	
+borderRightStyle                 	P	 CssStyle
+	设置右边框的样式 	
+borderRightWidth                 	P	 CssStyle
+	设置右边框的宽度 	
+borderStyle                      	P	 CssStyle
+	设置所有四个边框的样式 (可设置四种样式) 	
+borderTop                        	P	 CssStyle
+	在一行设置顶边框的所有属性 	
+borderTopColor                   	P	 CssStyle
+	设置顶边框的颜色 	
+borderTopStyle                   	P	 CssStyle
+	设置顶边框的样式 	
+borderTopWidth                   	P	 CssStyle
+	设置顶边框的宽度 	
+borderWidth                      	P	 CssStyle
+	设置所有四条边框的宽度 (可设置四种宽度) 	
+margin                           	P	 CssStyle
+	设置元素的边距 (可设置四个值) 	
+marginBottom                     	P	 CssStyle
+	设置元素的底边距 	
+marginLeft                       	P	 CssStyle
+	设置元素的左边距 	
+marginRight                      	P	 CssStyle
+	设置元素的右边据 	
+marginTop                        	P	 CssStyle
+	设置元素的顶边距 	
+outline                          	P	 CssStyle
+	在一行设置所有的outline属性
+outlineColor                     	P	 CssStyle
+	设置围绕元素的轮廓颜色 	5M 	
+outlineStyle                     	P	 CssStyle
+	设置围绕元素的轮廓样式 	5M 	
+outlineWidth                     	P	 CssStyle
+	设置围绕元素的轮廓宽度 	5M 	
+padding                          	P	 CssStyle
+	设置元素的填充 (可设置四个值) 	
+paddingBottom                    	P	 CssStyle
+	设置元素的下填充 	
+paddingLeft                      	P	 CssStyle
+	设置元素的左填充 	
+paddingRight                     	P	 CssStyle
+	设置元素的右填充 	
+paddingTop                       	P	 CssStyle
+	设置元素的顶填充 	
+clear                            	P	 CssStyle
+	设置在元素的哪边不允许其他的浮动元素 	
+clip                             	P	 CssStyle
+	设置元素的形状 	
+content                          	P	 CssStyle
+	设置元信息
+cssFloat                         	P	 CssStyle
+	设置图像或文本将出现（浮动）在另一元素中的何处
+cursor                           	P	 CssStyle
+	设置显示的指针类型 	
+direction                        	P	 CssStyle
+	设置元素的文本方向 	
+display                          	P	 CssStyle
+	设置元素如何被显示 	
+height                           	P	 CssStyle
+	设置元素的高度 	
+maxHeight                        	P	 CssStyle
+	设置元素的最大高度
+maxWidth                         	P	 CssStyle
+	设置元素的最大宽度
+minHeight                        	P	 CssStyle
+	设置元素的最小高度
+minWidth                         	P	 CssStyle
+	设置元素的最小宽度 
+overflow                         	P	 CssStyle
+	规定如何处理不适合元素盒的内容 	
+verticalAlign                    	P	 CssStyle
+	设置对元素中的内容进行垂直排列 	
+visibility                       	P	 CssStyle
+	设置元素是否可见 	
+width                            	P	 CssStyle
+	设置元素的宽度 	
+listStyle                        	P	 CssStyle
+	在一行设置列表的所有属性 	
+listStyleImage                   	P	 CssStyle
+	把图像设置为列表项标记 	
+listStylePosition                	P	 CssStyle
+	改变列表项标记的位置 	
+listStyleType                    	P	 CssStyle
+	设置列表项标记的类型 	
+bottom                           	P	 CssStyle
+	设置元素的底边缘距离父元素底边缘的之上或之下的距离 	
+left                             	P	 CssStyle
+	置元素的左边缘距离父元素左边缘的左边或右边的距离 	
+position                         	P	 CssStyle
+	把元素放置在static, relative, absolute 或 fixed 的位置 	
+right                            	P	 CssStyle
+	置元素的右边缘距离父元素右边缘的左边或右边的距离 	
+top                              	P	 CssStyle
+	设置元素的顶边缘距离父元素顶边缘的之上或之下的距离 	
+zIndex                           	P	 CssStyle
+	设置元素的堆叠次序 	
+orphans                          	P	 CssStyle
+	设置段落留到页面底部的最小行数
+page                             	P	 CssStyle
+	设置显示某元素时使用的页面类型
+pageBreakAfter                   	P	 CssStyle
+	设置某元素之后的分页行为 	
+pageBreakBefore                  	P	 CssStyle
+	设置某元素之前的分页行为 	
+pageBreakInside                  	P	 CssStyle
+	设置某元素内部的分页行为
+size                             	P	 CssStyle
+	设置页面的方向和尺寸 	  	
+widows                           	P	 CssStyle
+	设置段落必须留到页面顶部的最小行数 
+borderCollapse                   	P	 CssStyle.Table
+	设置表格边框是否合并为单边框，或者像在标准的HTML中那样分离
+borderSpacing                    	P	 CssStyle.Table
+	设置分隔单元格边框的距离 
+emptyCells                       	P	 CssStyle.Table
+	设置是否显示表格中的空单元格
+color                            	P	 CssStyle
+	设置文本的颜色 	
+font                             	P	 CssStyle
+	在一行设置所有的字体属性 	
+fontFamily                       	P	 CssStyle
+	设置元素的字体系列
+fontSize                         	P	 CssStyle
+	设置元素的字体大小
+fontStyle                        	P	 CssStyle
+	设置元素的字体样式 	
+fontVariant                      	P	 CssStyle
+	用小型大写字母字体来显示文本 	
+fontWeight                       	P	 CssStyle
+	设置字体的粗细 	
+letterSpacing                    	P	 CssStyle
+	设置字符间距 	
+lineHeight                       	P	 CssStyle
+	设置行间距 	
+textAlign                        	P	 CssStyle
+	排列文本 	
+textDecoration                   	P	 CssStyle
+	设置文本的修饰 	
+textIndent                       	P	 CssStyle
+	缩紧首行的文本 	
+textTransform                    	P	 CssStyle
+	对文本设置大写效果 	
+whiteSpace                       	P	 CssStyle
+	设置如何设置文本中的折行和空白符 	
+wordSpacing                      	P	 CssStyle
+	设置文本中的词间距
+--Error
+EvalError	T
+RangeError	T
+ReferenceError	T
+SyntaxError	T
+TypeError	T
+URIError	T
+message                          	P	 Error
+getContext				M	Canvas
+restore					M	Canvas
+save					M	Canvas
+rotate					M 	Canvas
+	rotate(angle)
+scale					M	Canvas
+	scale(x,y)
+	1表示不变
+setTransform				M	Canvas
+	setTransform(m11,m12,m21,m22,dx,dy)
+transform				M	Canvas
+	transform(m11,m12,m21,m22,dx,dy)
+translate				M	Canvas
+	translate(x,y)
+globalAlpha				P	Canvas
+	0--1
+globalCompositeOperation		P	Canvas
+	source-over
+	destination-over
+	source-atop 
+	destination-atop
+	source-in
+	destination-in
+	source-out 
+	destination-out
+	lighter
+	darker
+	copy
+	xor
+fillStyle				P	Canvas
+	color或Gradient或Pattern
+strokeStyle				P	Canvas
+	color或Gradient或Pattern
+createLinearGradient			M	Canvas
+	createLinearGradient(x0,y0,x1,y1)
+	两点之间线性变色
+createRadialGradient			M	Canvas
+	createRadialGradient(x0,y0,r0,x1,y1,r1)
+	r为半径
+addColorStop				P	CanvasGradient
+	addColorStop(offset,color)
+	offset=0-1设置变色点
+createPattern				M	Canvas
+	createPattern(image,repetition)
+	repeat,repeat-x,repeat-y,no-repeat
+lineCap					P	Canvas
+	"butt","round","square"
+	线头格式：方，圆
+lineJoin				P	Canvas
+	"miter","round","bevel"
+	折线格式：方，园，斜切
+lineWidth				P	Canvas
+miterLimit				P	Canvas
+shadowBlur				P	Canvas
+	阴影模糊等级
+shadowColor				P	Canvas
+shadowOffsetX				P	Canvas
+	阴影偏移量
+shadowOffsetY				P	Canvas
+	阴影偏移量
+clearRect				M	Canvas
+	clearRect(x,y,w,h)
+fillRect				M	Canvas
+	fillRect(x,y,w,h)
+strokeRect				M	Canvas
+	strokeRect(x,y,w,h)
+	空心方
+beginPath				M	Canvas
+moveTo					M	Canvas
+	moveTo(x,y)
+lineTo					M	Canvas
+	lineTo(x,y)
+rect					M	Canvas
+	rect(x,y,w,h)
+arc					M	Canvas
+	arc(x,y,radius,startAngle,endAngle,boolean)
+	boolean逆时针
+arcTo					M	Canvas
+	arcTo(x1,y1,x2,y2,radius)
+	两点之间半径为r的弧线
+quadraticCurveTo			M	Canvas
+	quadraticCurveTo(cpx,cpy,x,y)
+	2次贝塞尔曲线
+bezierCurveTo				M	Canvas
+	bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y)
+	3次贝塞尔曲线
+closePath				M	Canvas
+clip					M	Canvas
+	以路径建立剪切区
+fill					M	Canvas
+	填充
+stroke					M	Canvas
+	画路径线
+isPointInPath				M	Canvas
+	isPointInPath(x,y)
+	xy绝对坐标
+font					P	Canvas
+	"10px sans-serif"
+textAlign				P	Canvas
+	"start","end","left","right","center"
+textBaseline				P	Canvas
+	"alphabetic","top","hanging","middle","ideographic","bottom"
+fillText				M	Canvas
+	fillText(text,x,y,[maxWidth])
+strokeText				M	Canvas
+	strokeText(text,x,y,[maxWidth])
+measureText				M	Canvas
+	measureText(text)
+	计算长度
+width					P	Canvas.TextMetrics
+drawImage				M	Canvas
+	drawImage(image,dx,dy,[dw,dh])
+	drawImage(image,sx,sy,sw,sh,dx,dy,dw,dh)
+createImageData				M	Canvas
+	createImageData(sw,sh)
+createImageData				M	Canvas
+	createImageData(imagedata)
+getImageData				M	Canvas
+	getImageData(sx,sy,sw,sh)
+putImageData				M	Canvas
+	putImageData(imagedata,dx,dy,[dirtyX,dirtyY,dirtyW,dirtyH])
+	dirty为只更改指定区域
+width					P	Canvas.ImageData
+height					P	Canvas.ImageData
+data					P	Canvas.ImageData
+	像素数据数组，一个像素4个字节
+JSON	T
+stringify				M	JSON
+	stringify(obj, [replacer], [space])
+parse					M	JSON
+	parse(string, [reviver])
+	parse(string, function(key,value) {
+		if (key=="key") return xx 
+		else return xx
+		}
+toJSON					M	JSON
+XPathResult	T
+creatExpression				M	Document
+evaluate				M	Document
+	evaluate(expression, context, nsresolver, type, result)
+	context: documentElement
+	nsresolver: null
+	result: null
+	type:
+		XPathResult.ANY_TYPE
+		XPathResult.NUMBER_TYPE
+		XPathResult.STRING_TYPE
+		XPathResult.BOOLEAN_TYPE
+		XPathResult.UNORDERED_NODE_ITERATOR_TYPE
+		XPathResult.ORDERED_NODE_ITERATOR_TYPE
+		XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE
+		XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
+		XPathResult.ANY_UNORDERED_NODE_TYPE
+		XPathResult.FIRST_ORDERED_NODE_TYPE
+ANY_TYPE				C	XPathResult
+NUMBER_TYPE				C	XPathResult
+STRING_TYPE				C	XPathResult
+BOOLEAN_TYPE				C	XPathResult
+UNORDERED_NODE_ITERATOR_TYPE		C	XPathResult
+ORDERED_NODE_ITERATOR_TYPE		C	XPathResult
+UNORDERED_NODE_SNAPSHOT_TYPE		C	XPathResult
+ORDERED_NODE_SNAPSHOT_TYPE		C	XPathResult
+ANY_UNORDERED_NODE_TYPE			C	XPathResult
+FIRST_ORDERED_NODE_TYPE			C	XPathResult
+singleNodeValue				P	XPathResult
+stringValue				P	XPathResult
+resultType				P	XPathResult
+iterateNext				M	XPathResult

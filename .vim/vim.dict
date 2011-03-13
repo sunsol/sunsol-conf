@@ -1,0 +1,1104 @@
+nr2char(             通过 ASCII 码值取得一个字符
+char2nr(             取得字符的 ASCII 码值
+str2nr(              把字符串转换为数值
+str2float(           把字符串转换为浮点数
+printf(              根据 % 项目格式化字符串
+escape(              将字符串通过 '\' 转义
+shellescape(         转义字符串用于外壳命令
+fnameescape(         转义 Vim 命令使用的文件名
+tr(                  把一组字符翻译成另一组
+strtrans(            将一个字符串变成可显示的格式
+tolower(             将一个字符串转换为小写
+toupper(             将一个字符串转换为大写
+match(               字符串中的模式匹配处
+matchend(            字符串中的模式匹配结束处
+matchstr(            在一个字符串中匹配一个模式
+matchlist(           类似 matchstr()，同时返回子匹配
+stridx(              子串在母串中第一次出现的地方
+strridx(             子串在母串中最后一次出现的地方
+strlen(              字符串长度
+substitute(          用一个字符串替换一个匹配的模式
+submatch(            取得 ":substitute" 匹配中指定的某个匹配
+strpart(             取得字符串的一部分
+expand(              展开特殊的关键字
+iconv(               转换文本编码格式
+byteidx(             字符串里字符的字节位置
+repeat(              重复字符串多次
+eval(                计算字符串表达式
+get(                 得到项目，错误索引不报错
+len(                 列表的项目总数
+empty(               检查列表是否为空
+insert(              在列表某处插入项目
+add(                 在列表后附加项目
+extend(              在列表后附加另一个列表
+remove(              删除列表里一或多个项目
+copy(                建立列表的浅备份
+deepcopy(            建立列表的完整备份
+filter(              删除列表的选定项目
+map(                 改变每个列表项目
+sort(                给列表排序
+reverse(             反转列表项目的顺序
+split(               分割字符串成为列表
+join(                合并列表项目成为字符串
+range(               返回数值序列的列表
+string(              列表的字符串表示形式
+call(                调用函数，参数以列表形式提供
+index(               列表里某值的索引
+max(                 列表项目的最大值
+min(                 列表项目的最小值
+count(               计算列表里某值的出现次数
+repeat(              重复列表多次
+get(                 得到项目，错误的键不报错
+len(                 字典项目的总数
+has_key(             检查某键是否出现在字典里
+empty(               检查字典是否为空
+remove(              删除字典的项目
+extend(              从一个字典增加项目到另一个字典
+filter(              删除字典的选定项目
+map(                 改变每个字典项目
+keys(                得到字典的键列表
+values(              得到字典的值列表
+items(               得到字典的键-值组对的列表
+copy(                建立字典的浅备份
+deepcopy(            建立字典的完整备份
+string(              字典的字符串表示形式
+max(                 字典项目的最大值
+min(                 字典项目的最小值
+count(               计算字典里某值的出现次数
+float2nr(            把浮点数转换为数值
+abs(                 绝对值 (也适用于数值)
+round(               四舍五入
+ceil(                向上取整
+floor(               乡下取整
+trunc(               删除小数点后的值
+log10(               以 10 为底的对数
+pow(                 x 的 y 次方
+sqrt(                平方根
+sin(                 正弦
+cos(                 余弦
+atan(                反正切
+type(                变量的类型
+islocked(            检查变量是否加锁
+function(            得到函数名对应的函数引用
+getbufvar(           取得指定缓冲区中的变量值
+setbufvar(           设定指定缓冲区中的变量值
+getwinvar(           取得指定窗口的变量值
+gettabvar(           取得指定标签页的变量值
+gettabwinvar(        取得指定窗口和标签页的变量值
+setwinvar(           设定指定窗口的变量值
+settabvar(           设定指定标签页的变量值
+settabwinvar(        设定指定窗口和标签页的变量值
+garbagecollect(      可能情况下释放内存
+col(                 光标或位置标记所在的列
+virtcol(             光标或位置标记所在的屏幕列
+line(                光标或位置标记所在行
+wincol(              光标所在窗口列
+winline(             光标所在窗口行
+cursor(              置光标于 行／列 处
+getpos(              得到光标、位置标记等的位置
+setpos(              设置光标、位置标记等的位置
+byte2line(           取得某字节位置所在行号
+line2byte(           取得某行之前的字节数
+diff_filler(         得到一行之上的填充行数目
+getline(             从缓冲区中取一行
+setline(             替换缓冲区中的一行
+append(              附加行或行的列表到缓冲区
+indent(              某行的缩进
+cindent(             根据 C 缩进法则的某行的缩进
+lispindent(          根据 Lisp 缩进法则的某行的缩进
+nextnonblank(        查找下一个非空白行
+prevnonblank(        查找前一个非空白行
+search(              查找模式的匹配
+searchpos(           寻找模式的匹配
+searchpair(          查找 start/skip/end 配对的另一端
+searchpairpos(       查找 start/skip/end 配对的另一端
+searchdecl(          查找名字的声明
+glob(                展开通配符
+globpath(            在几个路径中展开通配符
+findfile(            在目录列表里查找文件
+finddir(             在目录列表里查找目录
+resolve(             找到一个快捷方式所指
+fnamemodify(         改变文件名
+pathshorten(         缩短路径里的目录名
+simplify(            简化路径，不改变其含义
+executable(          检查一个可执行程序是否存在
+filereadable(        检查一个文件可读与否
+filewritable(        检查一个文件可写与否
+getfperm(            得到文件权限
+getftype(            得到文件类型
+isdirectory(         检查一个目录是否存在
+getfsize(            取得文件大小
+getcwd(              取得当前工作路径
+haslocaldir(         检查当前窗口是否使用过 |:lcd|
+tempname(            取得一个临时文件的名称
+mkdir(               建立新目录
+delete(              删除文件
+rename(              重命名文件
+system(              取得一个 shell 命令的结果
+hostname(            系统的名称
+readfile(            读入文件到一个行列表
+writefile(           把一个行列表写到文件里
+getftime(            得到文件的最近修改时间
+localtime(           得到以秒计的当前时间
+strftime(            把时间转换为字符串
+reltime(             得到准确的当前或者已经经过的时间
+reltimestr(          把 reltime() 的结果转换为字符串
+argc(                参数列表项数
+argidx(              参数列表中的当前位置
+argv(                从参数列表中取得一项
+bufexists(           检查缓冲区是否存在
+buflisted(           检查缓冲区是否存在并在列表内
+bufloaded(           检查缓冲区是否存在并已加载
+bufname(             取得某缓冲区名
+bufnr(               取得某缓冲区号
+tabpagebuflist(      得到标签页里的缓冲区列表
+tabpagenr(           得到标签页号
+tabpagewinnr(        类似于特定标签页里的 winnr()
+winnr(               取得当前窗口的窗口号
+bufwinnr(            取得某缓冲区的窗口号
+winbufnr(            取得某窗口的缓冲区号
+getbufline(          得到指定缓冲区的行列表
+getcmdline(          得到当前命令行
+getcmdpos(           得到命令行里的光标位置
+setcmdpos(           设置命令行里的光标位置
+getcmdtype(          得到当前命令行的类型
+getqflist(           quickfix 错误的列表
+setqflist(           修改 quickfix 列表
+getloclist(          位置列表项目的列表
+setloclist(          修改位置列表
+complete(            设定要寻找的匹配
+complete_add(        加入要寻找的匹配
+complete_check(      检查补全是否被中止
+pumvisible(          检查弹出菜单是否显示
+foldclosed(          检查某一行是否被折叠起来
+foldclosedend(       类似 foldclosed() 但同时返回最后一行
+foldlevel(           检查某行的折叠级别
+foldtext(            产生折叠关闭时所显示的行
+foldtextresult(      得到关闭折叠显示的文本
+clearmatches(        清除 |matchadd()| 和 |:match| 诸命令定义的所有匹配
+getmatches(          得到 |matchadd()| 和 |:match| 诸命令定义的所有匹配
+hlexists(            检查高亮组是否存在
+hlID(                取得高亮组标示
+synID(               取得某位置的语法标示
+synIDattr(           取得某语法标示的特定属性
+synIDtrans(          取得翻译后的语法标示
+diff_hlID(           得到 diff 模式某个位置的高亮标示
+matchadd(            定义要高亮的模式 (一个 "匹配")
+matcharg(            得到 |:match| 参数的相关信息
+matchdelete(         删除 |matchadd()| 或 |:match| 诸命令定义的匹配
+setmatches(          恢复 |getmatches()| 保存的匹配列表
+spellbadword(        定位光标所在或之后的错误拼写的单词
+spellsuggest(        返回建议的拼写校正列表
+soundfold(           返回 "发音相似" 的单词等价形式
+histadd(             在历史记录中加入一项
+histdel(             从历史记录中删除一项
+histget(             从历史记录中提取一项
+histnr(              取得某历史记录的最大索引号
+browse(              显示文件查找器
+browsedir(           显示目录查找器
+confirm(             让用户作出选择
+getchar(             从用户那里取得一个字符输入
+getcharmod(          取得最近键入字符的修饰符
+feedkeys(            把字符放到预输入队列中
+input(               从用户那里取得一行输入
+inputlist(           让用户从列表里选择一个项目
+inputsecret(         从用户那里取得一行输入，不回显
+inputdialog(         从用户那里取得一行输入，使用对话框
+inputsave(           保存和清除预输入 (typeahead)
+inputrestore(        恢复预输入 (译注：参阅 input())
+getfontname(         得到当前使用的字体名
+getwinposx(          GUI Vim 窗口的 X 位置
+getwinposy(          GUI Vim 窗口的 Y 位置
+serverlist(          返回服务器列表
+remote_send(         向 Vim 服务器发送字符命令
+remote_expr(         在 Vim 服务器内对一个表达式求值
+server2client(       向一个服务器客户发送应答
+remote_peek(         检查一个服务器是否已经应答
+remote_read(         从一个服务器读取应答
+foreground(          将一个 Vim 窗口移至前台
+remote_foreground(   将一个 Vim 服务器窗口移至前台
+winheight(           取得某窗口的高度
+winwidth(            取得某窗口的宽度
+winrestcmd(          恢复窗口大小的返回命令
+winsaveview(         得到当前窗口的视图
+winrestview(         恢复保存的当前窗口的视图
+mode(                取得当前编辑状态
+visualmode(          最近一次使用过的可视模式
+hasmapto(            检查映射是否存在
+mapcheck(            检查匹配的映射是否存在
+maparg(              取得映射的右部 (rhs)
+exists(              检查变量，函数等是否存在
+has(                 检查 Vim 是否支持某特性
+changenr(            返回最近的改变号
+cscope_connection(   检查有无与 cscope 的连接
+did_filetype(        检查某文件类型自动命令是否已经使用
+eventhandler(        检查是否在一个事件处理程序内
+getpid(              得到 Vim 的进程号
+libcall(             调用一个外部库函数
+libcallnr(           同上，但返回一个数值
+getreg(              取得寄存器内容
+getregtype(          取得寄存器类型
+setreg(              设定寄存器内容及类型
+taglist(             得到匹配标签的列表
+tagfiles(            得到标签文件的列表
+Next           M 转到参数列表的上一个文件
+Print          M 显示行
+X              M 请求加密密钥
+append         M 附加文本
+abbreviate     M 输入缩写
+abclear        M 删除所有的缩写
+aboveleft      M 使得分割的窗口出现在左侧或者上方
+all            M 为参数列表的每个文件打开一个窗口
+amenu          M 为所有模式输入菜单项
+anoremenu      M 为所有模式输入菜单项，不会被重新映射
+args           M 显示参数列表
+argadd         M 增加项目到参数列表中
+argdelete      M 从参数列表中删除项目
+argedit        M 增加项目到参数列表中并编辑之
+argdo          M 在参数列表上的所有项目上执行一个命令
+argglobal      M 定义全局参数列表
+arglocal       M 定义本地参数列表
+argument       M 转到参数列表一个指定的文件
+ascii          M 显示光标所在的字符的 ascii 值
+autocmd        M 输入或者显示自动命令
+augroup        M 选择要用的自动命令组
+aunmenu        M 删除所有模式下的菜单
+buffer         M 转到缓冲区列表里的特定缓冲区
+bNext          M 转到缓冲区列表里的上一个缓冲区
+ball           M 为缓冲区列表里的每个缓冲区打开一个窗口
+badd           M 增加缓冲区到缓冲区列表
+bdelete        M 从缓冲区列表删除缓冲区
+behave         M 设置鼠标和选择行为
+belowright     M 使得分割的窗口出现在右侧或者下方
+bfirst         M 转到缓冲区列表里的第一个缓冲区
+blast          M 转到缓冲区列表里的最后一个缓冲区
+bmodified      M 转到缓冲区列表里的下一个修改过的缓冲区
+bnext          M 转到缓冲区列表里的下一个缓冲区
+botright       M 使得分割的窗口出现在最右侧或者下方
+bprevious      M 转到缓冲区列表里的上一个缓冲区
+brewind        M 转到缓冲区列表里的第一个缓冲区
+break          M 跳出 while 循环
+breakadd       M 增加调试器断点
+breakdel       M 删除调试器断点
+breaklist      M 列出调试器断点
+browse         M 使用文件选择对话框
+bufdo          M 为所有列表内缓冲区执行命令
+buffers        M 列出缓冲区列表里的所有文件
+bunload        M 卸载指定的缓冲区
+bwipeout       M 真正删除一个缓冲区
+change         M 替换一行或若干行
+cNext          M 跳转到上一个错误
+cNfile         M 跳转到前一个文件的最后一个错误
+cabbrev        M 类似于 ":abbreviate"，但用于命令行模式
+cabclear       M 清除所有缩写，用于命令行模式
+caddbuffer     M 通过缓冲区补充错误
+caddexpr       M 通过表达式补充错误
+caddfile       M 加入错误信息到当前 quickfix 列表
+call           M 调用函数
+catch          M :try 命令的一部分
+cbuffer        M 分析错误信息并跳转到第一个
+cc             M 跳转到特定的错误
+cclose         M 关闭 quickfix 窗口
+cd             M 改变目录
+center         M 排版行，使其居中对齐
+cexpr          M 从表达式里读取错误并跳转到第一个
+cfile          M 读入含有错误信息的文件，并跳转到第一个
+cfirst         M 跳转到指定的错误上，缺省为第一个
+cgetbuffer     M 从缓冲区里得到错误
+cgetexpr       M 从表达实里得到错误
+cgetfile       M 读入含有错误信息的文件
+changes        M 显示修改的列表
+chdir          M 改变当前目录
+checkpath      M 列出包含的头文件
+checktime      M 检查载入缓冲区的时间标签
+clist          M 列出所有错误
+clast          M 跳转到指定的错误上，缺省为最后一个
+close          M 改变当前窗口
+cmap           M 类似于 ":map"，但用于命令行模式
+cmapclear      M 清除所有映射，用于命令行模式
+cmenu          M 为命令行模式增加菜单
+cnext          M 跳转到下一个错误
+cnewer         M 跳转到下一个较新的错误列表
+cnfile         M 跳转到下一个文件的第一个错误
+cnoremap       M 类似于 ":noremap"，但用于命令行模式
+cnoreabbrev    M 类似于 ":noreabbrev"，但用于命令行模式
+cnoremenu      M 类似于 ":noremenu"，但用于命令行模式
+copy           M 复制行
+colder         M 跳转到上一个较老的错误列表
+colorscheme    M 载入特定的色彩方案
+command        M 建立用户自定的命令
+comclear       M 清除所有用户自定的命令
+compiler       M 为特定编译器设定选项
+continue       M 回到 :while 开始处
+confirm        M 需要确认时，提示用户
+copen          M 打开 quickfix 窗口
+cprevious      M 跳转到上一个错误
+cpfile         M 跳转到上一个文件的最后一个错误
+cquit          M 退出 Vim，带错误码
+crewind        M 跳到指定的错误，缺省为第一个
+cscope         M 执行 cscope 命令
+cstag          M 使用 cscope 来跳转到标签上
+cunmap         M 类似于 ":unmap"，但用于命令行模式
+cunabbrev      M 类似于 ":unabbrev"，但用于命令行模式
+cunmenu        M 删除命令行的菜单
+cwindow        M 打开或者关闭 quickfix 窗口
+delete         M 删除行
+delmarks       M 删除位置标记
+debug          M 在调试模式执行命令
+debuggreedy    M 从正常的输入那里读取调试模式命令
+delcommand     M 删除用户自定的命令
+delfunction    M 删除用户函数
+diffupdate     M 更新 'diff' 缓冲区
+diffget        M 删除当前缓冲区的所有差异
+diffoff        M 关闭 diff 模式
+diffpatch      M 应用补丁然后显示差异
+diffput        M 删除另外一个缓冲区的差异
+diffsplit      M 显示和另外一个文件的差异
+diffthis       M 使得当前窗口成为 diff 窗口
+digraphs       M 显示或者输入二合字母
+display        M 显示寄存器
+djump          M 跳转到 #define
+dlist          M 列出所有的 #define
+doautocmd      M 在当前缓冲区应用自动命令
+doautoall      M 在所有载入的缓冲区上应用自动命令
+drop           M 跳到编辑某文件的窗口，不成功则在当前窗口编辑之
+dsearch        M 列出一个 #define
+dsplit         M 分割窗口并跳转到 #define
+edit           M 编辑文件
+earlier        M 回到旧的改变，撤销
+echo           M 回显表达式结果
+echoerr        M 类似于 :echo，如同错误一样显示和使用历史
+echohl         M 为 echo 等命令设置高亮
+echomsg        M 等同于 :echo，在历史里放置消息
+echon          M 等同于 :echo，但不留 <EOL>
+else           M :if 命令的一部分
+elseif         M :if 命令的一部分
+emenu          M 按名字执行菜单
+endif          M 结束最近的 :if
+endfor         M 结束最近的 :for
+endfunction    M 结束用户函数
+endtry         M 结束最近的 :try
+endwhile       M 结束最近的 :while
+enew           M 编辑新的无名缓冲区
+ex             M 等同于 ":edit"
+execute        M 执行表达式的结果产生的字符串
+exit           M 等同于 ":xit"
+exusage        M Ex 命令总览
+file           M 显示或者设置当前文件名
+files          M 列出缓冲区列表的所有文件
+filetype       M 切换文件类型检测的打开/关闭
+find           M 在 'path' 里找寻文件并编辑之
+finally        M :try 命令的一部分
+finish         M 退出 Vim 脚本的执行
+first          M 转到参数列表的第一个文件
+fixdel         M 设置 <Del> 的键码
+fold           M 创建折叠
+foldclose      M 关闭折叠
+folddoopen     M 对所有不在关闭折叠的行执行命令
+folddoclosed   M 对所有在关闭折叠的行执行命令
+foldopen       M 打开折叠
+for            M for 循环
+function       M 定义用户函数
+global         M 对匹配的行执行命令
+goto           M 转到缓冲区某字节处
+grep           M 执行 'grepprg' 并转到第一个匹配处
+grepadd        M 类似 :grep，但附加到当前列表后
+gui            M 启动 GUI
+gvim           M 启动 GUI
+hardcopy       M 发送文本到打印机
+help           M 打开帮助窗口
+helpfind       M 打开显示帮助窗口的对话框
+helpgrep       M 类似于 ":grep"，但搜索帮助文件
+helptags       M 为一个目录产生帮助标签
+highlight      M 指定高亮方法
+hide           M 为一个命令隐藏当前缓冲区
+history        M 显示历史列表
+insert         M 插入文本
+iabbrev        M 类似于 ":abbrev"，但用于插入模式
+iabclear       M 类似于 ":abclear"，但用于插入模式
+if             M 条件满足时执行命令
+ijump          M 跳转到标识符的定义
+ilist          M 列出匹配标识符的行
+imap           M 类似于 ":map"，但用于插入模式
+imapclear      M 类似于 ":map"，但用于插入模式
+imenu          M 为插入模式增加菜单
+inoremap       M 类似于 ":noremap"，但用于插入模式
+inoreabbrev    M 类似于 ":noreabbrev"，但用于插入模式
+inoremenu      M 类似于 ":noremenu"，但用于插入模式
+intro          M 显示介绍文字
+isearch        M 列出匹配标识符的一行
+isplit         M 分割窗口，并跳转到标识符的定义
+iunmap         M 类似于 ":unmap"，但用于插入模式
+iunabbrev      M 类似于 ":unabbrev"，但用于插入模式
+iunmenu        M 删除插入模式的菜单
+join           M 连接行
+jumps          M 显示跳转表
+k              M 设置位置标记
+keepalt        M 跟随的命令保持轮换文件不变
+keepmarks      M 跟随的命令保持位置标记不变
+keepjumps      M 跟随的命令保持跳转表和位置标记不变
+lNext          M 转到位置列表的上一个位置
+lNfile         M 转到上个文件的最近一个位置
+list           M 显示行
+laddexpr       M 通过表达式补充位置
+laddbuffer     M 通过缓冲区补充位置
+laddfile       M 把位置加到当前位置列表里
+last           M 转到参数列表的最后一个文件
+language       M 设置语言 (locale)
+later          M 转到新的改变，重做
+lbuffer        M 分析位置并跳转到第一个位置
+lcd            M 改变本地的目录
+lchdir         M 改变本地的目录
+lclose         M 关闭位置窗口
+lcscope        M 类似于 ":cscope"，但使用位置列表
+left           M 左对齐行
+leftabove      M 使得分割的窗口出现在左侧或者上方
+let            M 给变量或选项赋值
+lexpr          M 从表达式里读取位置并跳转到第一个
+lfile          M 从文件里读取位置并跳转到第一个
+lfirst         M 转到指定的位置上，缺省第一个
+lgetbuffer     M 从缓冲区里读取位置
+lgetexpr       M 从表达式里读取位置
+lgetfile       M 从文件里读取位置
+lgrep          M 运行 'grepprg' 并跳转到第一个匹配
+lgrepadd       M 类似于 :grep，但附加到当前列表上
+lhelpgrep      M 类似于 ":helpgrep"，但使用位置列表
+ll             M 转到指定位置
+llast          M 转到指定位置，缺省最后一个
+llist          M 列出所有的位置
+lmake          M 执行外部命令 'makeprg' 并分析错误信息
+lmap           M 类似于 ":map!"，但包括 Lang-Arg 模式
+lmapclear      M 类似于 ":mapclear!"，但包括 Lang-Arg 模式
+lnext          M 跳到下一个位置
+lnewer         M 跳到较新的位置列表
+lnfile         M 跳到下一个文件的第一个位置
+lnoremap       M 类似于 ":noremap!"，但包括 Lang-Arg 模式
+loadkeymap     M 载入后面的键盘映射表，直到 EOF 为止
+loadview       M 从文件里为当前窗口载入视图
+lockmarks      M 跟随的命令保持位置标记不变
+lockvar        M 给变量加锁
+lolder         M 转到较旧的位置列表
+lopen          M 打开位置窗口
+lprevious      M 转到前一个位置
+lpfile         M 转到上一个文件的最近的位置
+lrewind        M 转到指定的位置，缺省第一个
+ls             M 列出所有的缓冲区
+ltag           M 跳转到标签，并把匹配的标签加到位置列表上
+lunmap         M 类似于 ":unmap!"，但包括 Lang-Arg 模式
+lua            M 执行 |Lua| 命令
+luado          M 对每行都执行 Lua 命令
+luafile        M 执行 |Lua| 脚本文件
+lvimgrep       M 在若干文件里搜索模式
+lvimgrepadd    M 类似于 :vimgrep，但附加到当前列表
+lwindow        M 打开或关闭位置窗口
+move           M 移动行
+mark           M 设置位置标记
+make           M 执行外部命令 'makeprg' 并分析其错误信息
+map            M 显示或者输入映射
+mapclear       M 清除所有普通和可视模式的映射
+marks          M 列出所有的位置标记
+match          M 定义要高亮显示的匹配的模式
+menu           M 输入新的菜单项
+menutranslate  M 增加菜单翻译项目
+messages       M 显示以前显示的消息
+mkexrc         M 写入当前映射和设置到文件
+mksession      M 写入会话信息到文件
+mkspell        M 生成 .spl 拼写文件
+mkvimrc        M 写入当前映射和设置到文件
+mkview         M 写入当前窗口的视图到文件
+mode           M 显示或者改变屏幕模式
+mzscheme       M 执行 MzScheme 命令
+mzfile         M 执行 MzScheme 脚本文件
+nbclose        M 关闭当前 Netbeans 会话
+nbkey          M 传递一个键给 Netbeans
+nbstart        M 打开一个新的 Netbeans 会话
+next           M 跳转到参数列表的下一个文件
+new            M 创建一个新的空白窗口
+nmap           M 类似于 ":map"，但使用普通模式
+nmapclear      M 清除普通模式的所有映射
+nmenu          M 为普通模式增加菜单
+nnoremap       M 类似于 ":noremap"，但使用普通模式
+nnoremenu      M 类似于 ":noremenu"，但使用普通模式
+noautocmd      M 跟随的命令不激活自动命令
+noremap        M 输入不会被重新映射的映射
+nohlsearch     M 暂停 'hlsearch' 高亮
+noreabbrev     M 输入不会被重新映射的缩写
+noremenu       M 输入不会被重新映射的菜单
+normal         M 执行普通模式的命令
+number         M 显示文本行时给出行号
+nunmap         M 类似于 ":unmap"，但使用普通模式
+nunmenu        M 删除普通模式的菜单
+oldfiles       M 列出 viminfo 文件中包含位置标记的文件
+open           M 启动打开模式 (没有实现)
+omap           M 类似于 ":map"，但使用操作符等待模式
+omapclear      M 删除操作符等待模式的所有映射
+omenu          M 为操作符等待模式增加菜单
+only           M 关闭当前窗口，除了当前的窗口以外
+onoremap       M 类似于 ":noremap"，但使用操作符等待模式
+onoremenu      M 类似于 ":noremenu"，但使用操作符等待模式
+options        M 打开选项窗口
+ounmap         M 类似于 ":unmap"，但使用操作符等待模式
+ounmenu        M 删除操作符等待模式的菜单
+ownsyntax      M 为本窗口设置新的局部语法高亮
+print          M 显示行
+profdel        M 停止剖视 (profile) 函数或脚本
+profile        M 剖视 (profile) 函数或脚本
+promptfind     M 打开 GUI 对话框进行搜索
+promptrepl     M 打开 GUI 对话框进行搜索/替代
+pclose         M 关闭预览窗口
+pedit          M 在预览窗口编辑文件
+perl           M 执行 Perl 命令
+perldo         M 对每行都执行 Perl 命令
+pop            M 跳转到标签栈较旧的项目上
+popup          M 根据名字弹出菜单
+ppop           M 在预览窗口 ":pop"
+preserve       M 写入所有文本到交换文件
+previous       M 跳转到参数列表里的上一个文件
+psearch        M 类似于 ":ijump"，但在预览窗口显示匹配
+ptag           M 在预览窗口显示标签
+ptNext         M 在预览窗口 |:tNext|
+ptfirst        M 在预览窗口 |:trewind|
+ptjump         M 在预览窗口 |:tjump| 和显示标签
+ptlast         M 在预览窗口 |:tlast|
+ptnext         M 在预览窗口 |:tnext|
+ptprevious     M 在预览窗口 |:tprevious|
+ptrewind       M 在预览窗口 |:trewind|
+ptselect       M 在预览窗口 |:tselect| 和显示标签
+put            M 插入寄存器的内容到文本
+pwd            M 显示当前目录
+py3            M 执行 Python 3 命令
+python3        M 同 :py3
+py3file        M 执行 Python 3 脚本文件
+python         M 执行 Python 命令
+pyfile         M 执行 Python 脚本文件
+quit           M 退出当前窗口 (如果只有一窗口，则退出 Vim)
+quitall        M 退出 Vim
+qall           M 退出 Vim
+read           M 读入文件到文本
+recover        M 从交换文件里恢复文件
+redo           M 重做一次撤销的改变
+redir          M 重定向消息到文件或者寄存器
+redraw         M 强迫显示的重画
+redrawstatus   M 强迫状态行的重画
+registers      M 显示寄存器的内容
+resize         M 改变当前窗口的高度
+retab          M 改变制表大小
+return         M 从用户函数返回
+rewind         M 转到参数列表的第一个文件
+right          M 右对齐文本
+rightbelow     M 使得分割窗口出现在右侧或者下方
+ruby           M 执行 Ruby 命令
+rubydo         M 对每行执行 Ruby 命令
+rubyfile       M 执行 Ruby 脚本文件
+rundo          M 从文件里读入撤销信息
+runtime        M 执行 'runtimepath' 里的 vim 脚本
+rviminfo       M 读取 viminfo 文件
+substitute     M 查找和替代文本
+sNext          M 分割窗口并转到参数列表的前一个文件
+sandbox        M 在沙盘里执行命令
+sargument      M 分割窗口并转到参数列表的某一个文件
+sall           M 为参数列表的每个文件打开窗口
+saveas         M 用别的名字保存文件。
+sbuffer        M 分割窗口并转到缓冲区列表的某一个文件
+sbNext         M 分割窗口并转到缓冲区列表的前一个文件
+sball          M 为缓冲区列表的每个文件打开窗口
+sbfirst        M 分割窗口并转到缓冲区列表的第一个文件
+sblast         M 分割窗口并转到缓冲区列表的最后一个文件
+sbmodified     M 分割窗口并转到缓冲区列表的修改过的文件
+sbnext         M 分割窗口并转到缓冲区列表的后一个文件
+sbprevious     M 分割窗口并转到缓冲区列表的前一个文件
+sbrewind       M 分割窗口并转到缓冲区列表的第一个文件
+scriptnames    M 列出所有执行过的 Vim 脚本的名字
+scriptencoding M 执行过的 Vim 脚本使用的编码
+scscope        M 分割窗口并执行 cscope 命令
+set            M 显示或设置选项
+setfiletype    M 设置 'filetype'，除非已经设置过
+setglobal      M 显示或者设置全局选项值
+setlocal       M 显示或者设置本地选项值
+sfind          M 分割当前窗口并编辑 'path' 的文件
+sfirst         M 分割窗口并转到参数列表的第一个文件
+shell          M 退到外壳程序
+simalt         M Win32 GUI: 模拟 Windows ALT 键
+sign           M 操作标号
+silent         M 安静地运行命令
+sleep          M 几秒内不作任何事
+slast          M 分割窗口并转到参数列表的最后一个文件
+smagic         M 带 'magic' 的 :substitute
+smap           M 类似于 ":map"，但用于选择模式
+smapclear      M 删除选择模式所有的映射
+smenu          M 增加选择模式菜单
+snext          M 分割窗口并转到参数列表的下一个文件
+sniff          M 发送请求到 sniff
+snomagic       M 带 'nomagic' 的 :substitute
+snoremap       M 类似于 ":noremap"，但用于选择模式
+snoremenu      M 类似于 ":noremenu"，但用于选择模式
+sort           M 给行排序
+source         M 从文件里读取 Vim 或 Ex 命令
+spelldump      M 分割窗口并用正确的单词填充
+spellgood      M 增加拼写的好词
+spellinfo      M 显示载入的拼写文件的信息
+spellrepall    M 像上次 |z=| 那样，但替换所有的坏词
+spellundo      M 删除好词或坏词
+spellwrong     M 增加拼写错误
+split          M 分割当前窗口
+sprevious      M 分割窗口并转到参数列表的前一个文件
+srewind        M 分割窗口并转到参数列表的第一个文件
+stop           M 暂停编辑器并退回外壳
+stag           M 分割窗口并跳转到标签上
+startgreplace  M 开始虚拟替换模式
+startreplace   M 开始替换模式
+startinsert    M 开始插入模式
+stopinsert     M 退出插入模式
+stjump         M 执行 ":tjump" 并分割窗口
+stselect       M 执行 ":tselect" 并分割窗口
+sunhide        M 等同于 ":unhide"
+sunmap         M 类似于 ":unmap"，但用于选择模式
+sunmenu        M 删除选择模式的菜单
+suspend        M 等同于 ":stop"
+sview          M 分割窗口并以只读模式编辑文件
+swapname       M 显示当前交换文件的名字
+syntax         M 语法高亮
+syncbind       M 同步滚动绑定
+t              M 等同于 ":copy"
+tNext          M 跳转到上一个匹配的标签
+tabNext        M 跳到上一个标签页
+tabclose       M 关闭当前标签页
+tabdo          M 为每个标签页执行命令
+tabedit        M 在新标签页里编辑文件
+tabfind        M 寻找 'path' 里的文件，在新标签页里编辑之
+tabfirst       M 转到第一个标签页
+tablast        M 转到最后一个标签页
+tabmove        M 把标签页移到别的位置
+tabnew         M 在新标签页里编辑文件
+tabnext        M 转到下一个标签页
+tabonly        M 关闭所有除了当前标签页以外的所有标签页
+tabprevious    M 转到前一个标签页
+tabrewind      M 转到第一个标签页
+tabs           M 列出标签页以及里面包含的内容
+tab            M 打开新窗口时建立新的标签页
+tag            M 跳转到标签上
+tags           M 显示标签栈的内容
+tcl            M 执行 Tcl 命令
+tcldo          M 为每行执行 Tcl 命令
+tclfile        M 执行 Tcl 脚本文件
+tearoff        M 撕下一个菜单
+tfirst         M 转到第一个匹配的标签
+throw          M 抛出例外
+tjump          M 类似于 ":tselect"，只有一个匹配时直接跳转之
+tlast          M 跳转到最后一个匹配的标签
+tmenu          M 定义菜单的工具提示
+tnext          M 跳转到下一个匹配的标签
+topleft        M 使得分割的窗口出现在顶部或者最左端
+tprevious      M 跳转到上一个匹配的标签
+trewind        M 跳转到第一个匹配的标签
+try            M 执行命令，错误或者例外时终止
+tselect        M 列出匹配的标签并从中选择一个
+tunmenu        M 删除菜单的工具提示
+undo           M 撤销最近的改变
+undojoin       M 将下一个改变和上一个撤销块合并
+undolist       M 列出撤销树的叶结点
+unabbreviate   M 删除缩写
+unhide         M 为缓冲区列表里每个载入的文件打开窗口
+unlet          M 删除变量
+unlockvar      M 给变量解锁
+unmap          M 删除映射
+unmenu         M 删除菜单
+unsilent       M 非安静模式执行命令
+update         M 如果有修改，写回缓冲区
+vglobal        M 对不匹配的行，执行命令
+version        M 显示版本号和其它信息
+verbose        M 执行命令，过程中设置 'verbose'
+vertical       M 使得跟随的命令垂直分割
+vimgrep        M 在若干文件里查找模式
+vimgrepadd     M 类似于 :vimgrep，但附加到当前列表
+visual         M 等同于 ":edit"，但关掉 "Ex" 模式
+viusage        M 普通模式命令的总览
+view           M 以只读方式编辑文件
+vmap           M 类似于 ":map"，但使用可视+选择模式
+vmapclear      M 删除可视+选择模式所有的映射
+vmenu          M 为可视+选择模式增加菜单
+vnew           M 建立新的空白窗口，垂直分割
+vnoremap       M 类似于 ":noremap"，但使用可视+选择模式
+vnoremenu      M 类似于 ":noremenu"，但使用可视+选择模式
+vsplit         M 垂直分割当前窗口
+vunmap         M 类似于 ":unmap"，但使用可视+选择模式
+vunmenu        M 删除可视+选择模式的菜单
+windo          M 为每个窗口执行命令
+write          M 写回文件
+wNext          M 写回文件，然后跳转到参数列表的前一个文件
+wall           M 写回所有 (改变的) 缓冲区
+while          M 只要条件满足，执行循环体
+winsize        M 取得或者设置窗口大小 (已废弃)
+wincmd         M 执行窗口 (CTRL-W) 命令
+winpos         M 取得或者设置窗口位置
+wnext          M 写回文件，然后跳转到参数列表的下一个文件
+wprevious      M 写回文件，然后跳转到参数列表的前一个文件
+wq             M 写回文件，然后退出窗口或者 Vim
+wqall          M 写回所有 (改变的) 缓冲区然后退出 Vim
+wsverb         M 把动词通过 IPC 发送给 workshop
+wundo          M 把撤销信息写入文件
+wviminfo       M 写入 viminfo 文件
+xit            M 如果缓冲区被改动，写入之。然后退出窗口或者 Vim
+xall           M 等同于 ":wqall"
+xmapclear      M 删除可视模式的所有映射
+xmap           M 类似于 ":map"，但使用可视模式
+xmenu          M 增加可视模式的菜单
+xnoremap       M 类似于 ":noremap"，但使用可视模式
+xnoremenu      M 类似于 ":noremenu"，但使用可视模式
+xunmap         M 类似于 ":unmap"，但使用可视模式
+xunmenu        M 删除可视模式的菜单
+yank           M 抽出行到寄存器
+aleph           O Aleph 字母 (希伯来语) 的 ASCII 代码
+allowrevins     O 允许插入和命令行模式的 CTRL-_
+altkeymap       O 缺省的第二语言 (波斯语/希伯来语)
+ambiwidth       O 如何处理有多种宽度的 Unicode 字符
+antialias       O Mac OS X: 用平滑反锯齿的字体
+autochdir       O 根据当前窗口的文件切换目录
+arabic          O 使用阿拉伯语为缺省的第二语言
+arabicshape     O 阿拉伯语的字型重整
+autoindent      O 根据上一行决定新行的缩进
+autoread        O 有 Vim 之外的改动时自动重读文件
+autowrite       O 有改动时自动写回文件
+autowriteall    O 类似于 'autowrite'，但适用于更多命令
+background      O "dark" 或 "light"，用于色彩的高亮
+backspace       O 在一行开头按退格键如何处理
+backup          O 覆盖文件时保留备份文件
+backupcopy      O 文件备份使用复制而不是换名
+backupdir       O 备份文件使用的目录列表
+backupext       O 备份文件使用的扩展名
+backupskip      O 匹配这些模式的文件不予备份
+balloondelay    O 弹出气泡之前的延迟 (以毫秒计)
+ballooneval     O 打开气泡表达式求值功能
+balloonexpr     O 计算气泡显示内容的表达式
+binary          O 二进制方式读/写/编辑文件
+bioskey         O MS-DOS: 用 bios 调用取得字符输入
+bomb            O 文件头附加字节顺序标记 (Byte Order Mark)
+breakat         O 可以在此断行的字符
+browsedir       O 开始浏览文件的目录
+bufhidden       O 缓冲区不再在窗口显示时的行为
+buflisted       O 缓冲区是否显示在缓冲区列表中
+buftype         O 缓冲区的特殊类型
+casemap         O 指定字母大小写如何改变
+cdpath          O ":cd" 搜索的目录列表
+cedit           O 打开命令行窗口的键
+charconvert     O 完成字符编码转换的表达式
+cindent         O 实现 C 程序的缩进
+cinkeys         O 设置 'cindent' 时启动缩进的键
+cinoptions      O 设置 'cindent' 时如何缩进
+cinwords        O 'si' 和 'cin' 在这些词后加入额外的缩进
+clipboard       O 使用剪贴板作为无名的寄存器
+cmdheight       O 命令行使用的行数
+cmdwinheight    O 命令行窗口的高度
+colorcolumn     O 高亮指定列
+columns         O 显示屏幕的列数
+comments        O 可以开始注释行的模式
+commentstring   O 注释的样板；用于折叠的标志
+compatible      O 尽可能做到与 Vi 兼容
+complete        O 指定插入模式的自动补全如何工作
+completefunc    O 插入模式补全使用的函数
+completeopt     O 插入模式补全使用的选项
+concealcursor   O 是否隐藏光标所在行的可隐藏文本
+conceallevel    O 是否显示可隐藏文本
+confirm         O 询问如何处理未保存/只读的文件
+conskey         O 直接从控制台读入键击 (只限于 MS-DOS)
+copyindent      O 使得 'autoindent' 使用已有的缩进结构
+cpoptions       O 设定 Vi-兼容的行为
+cryptmethod     O 文件写入时所用的加密方法
+cscopepathcomp  O 显示路径多少部分
+cscopeprg       O 执行 cscope 的命令
+cscopequickfix  O 用 quickfix 窗口得到 cscope 的结果
+cscopetag       O 用 cscope 处理标签命令
+cscopetagorder  O 决定 ":cstag" 的搜索顺序
+cscopeverbose   O 增加 cscope 数据库时给出消息
+cursorbind      O 光标移动时同时在其它窗口移动
+cursorcolumn    O 高亮光标所在屏幕列
+cursorline      O 高亮光标所在屏幕行
+debug           O 设为 "msg" 可以看到所有的错误消息
+define          O 查找宏定义所使用的模式
+delcombine      O 在单独使用时删除组合用字符
+dictionary      O 关键字自动补全所用的文件名
+diff            O 当前窗口使用 diff 模式
+diffexpr        O 得到 diff 文件所用的表达式
+diffopt         O 使用 diff 模式的选项
+digraph         O 允许插入模式时输入二合字母
+directory       O 交换文件所用的目录名列表
+display         O 如何显示文本的标志位列表
+eadirection     O 'equalalways' 工作的方向
+edcompatible    O 切换 ":substitute" 命令的标志位
+encoding        O 内部使用的编码方式
+endofline       O 文件最后一行写入换行符 <EOL>
+equalalways     O 自动使所有窗口大小相同
+equalprg        O "=" 命令使用的外部命令
+errorbells      O 有错误信息时响铃
+errorfile       O QuickFix 模式的错误文件名
+errorformat     O 错误文件行格式的描述
+esckeys         O 插入模式下识别功能键
+eventignore     O 忽略的自动命令事件
+expandtab       O 键入 <Tab> 时使用空格
+exrc            O 在当前目录里读入 .vimrc 和 .exrc
+fileencoding    O 多字节文本的文件编码
+fileencodings   O 参与自动检测的字符编码
+fileformat      O 文件输入输出使用的格式
+fileformats     O 参与自动检测的 'fileformat' 的格式
+filetype        O 自动命令使用的文件类型
+fillchars       O 显示特殊项目所使用的字符
+fkmap           O 波斯键盘映射
+foldclose       O 当光标离开时关闭折叠
+foldcolumn      O 设定指示折叠的列宽度
+foldenable      O 设置为显示所用打开的折叠
+foldexpr        O 当 'foldmethod' 为 "expr" 时使用的表达式
+foldignore      O 当 'foldmethod' 为 "indent" 时忽略的行
+foldlevel       O 当折叠级别高于此值时关闭折叠
+foldlevelstart  O 开始编辑文件的 'foldlevel'
+foldmarker      O 当 'foldmethod' 为 "marker" 时的标志
+foldmethod      O 折叠的类型
+foldminlines    O 折叠关闭所需的最少行数
+foldnestmax     O 最大折叠深度
+foldopen        O 打开折叠所使用的命令
+foldtext        O 显示关闭的折叠所用的表达式
+formatlistpat   O 识别列表头部的模式
+formatoptions   O 自动排版完成的方式
+formatprg       O "gq" 命令使用的外部程序
+formatexpr      O "gq" 命令使用的表达式
+fsync           O 文件写回后是否激活 fsync()
+gdefault        O 缺省打开 ":substitute" 的 'g' 标志
+grepformat      O 'grepprg' 的输出格式
+grepprg         O ":grep" 使用的程序
+guicursor       O GUI: 光标形状和闪烁的设置
+guifont         O GUI: 使用的字体名
+guifontset      O GUI: 使用的多字节字体名
+guifontwide     O 双倍宽度字符的字体名列表
+guiheadroom     O GUI: 用于窗口装饰的像素空间
+guioptions      O GUI: 使用的部件和选项
+guipty          O GUI: ":!" 命令尝试仿终端
+guitablabel     O GUI: 标签页定制的标签
+guitabtooltip   O GUI: 标签页定制的工具提示
+helpfile        O 主帮助文件的完整路径名
+helpheight      O 新帮助窗口的最小高度
+helplang        O 首选帮助语言
+hidden          O 当缓冲区被放弃 (|abandon|) 时不卸载之
+highlight       O 设置若干场合下的高亮模式
+hlsearch        O 高亮最近的匹配搜索模式
+history         O 记住的命令行的行数
+hkmap           O 希伯来语的键盘映射
+hkmapp          O 希伯来语的音节 (phonetic) 键盘映射
+icon            O 让 Vim 设定窗口图标的文本
+iconstring      O Vim 图标文本所用的字符串
+ignorecase      O 搜索模式时忽略大小写
+imactivatekey   O 激活 X 输入方法 (X input method) 的键击
+imcmdline       O 开始编辑命令行时使用 IM
+imdisable       O 任何模式下不使用 IM
+iminsert        O 插入模式下使用 :lmap 或 IM
+imsearch        O 输入搜索模式时使用 :lmap 或 IM
+include         O 查找包含文件所使用的模式
+includeexpr     O 处理包含文件行所使用的表达式
+incsearch       O 输入搜索模式时同时高亮部分的匹配
+indentexpr      O 得到一行的缩进位置的表达式
+indentkeys      O 使用 'indentexpr' 时启动缩进的键
+infercase       O 关键字自动补全的匹配调整大小写
+insertmode      O 开始编辑文件时进入插入模式
+isfname         O 文件和路径名可用的字符
+isident         O 标识符可用的字符
+iskeyword       O 关键字可用的字符
+isprint         O 可显示的字符
+joinspaces      O 连接命令在句号之后加两个空格
+key             O 加密密钥
+keymap          O 键盘映射名
+keymodel        O 允许用键击开始/停止选择
+keywordprg      O "K" 命令所使用的程序
+langmap         O 其他语言模式用的字母表字符
+langmenu        O 菜单使用的语言
+laststatus      O 当最近的窗口有状态行时提示
+lazyredraw      O 执行宏时不重画
+linebreak       O 在空白处回绕长行
+lines           O 显示屏幕的行数
+linespace       O 字符之间的像素行数
+lisp            O 自动 lisp 缩进
+lispwords       O 改变 lisp 缩进方式的单词
+list            O 显示 <Tab> 和 <EOL>
+listchars       O list 模式下显示用的字符
+loadplugins     O 启动时调入插件脚本
+macatsui        O Mac GUI: 使用 ATSUI 文本绘制
+magic           O 改变搜索模式所用的特殊字符
+makeef          O ":make" 所用的错误文件名
+makeprg         O ":make" 命令所用的程序
+matchpairs      O "%" 能匹配的字符对
+matchtime       O 显示匹配括号的时间 (以十分之一秒计)
+maxcombine      O 显示的最大组合用字符数
+maxfuncdepth    O 用户函数的最大递归深度
+maxmapdepth     O 映射的最大递归深度
+maxmem          O 单个缓冲区可用的最大内存 (以千字节计)
+maxmempattern   O 模式匹配使用的最大内存 (以千字节计)
+maxmemtot       O 所有缓冲区可用的最大内存 (以千字节计)
+menuitems       O 菜单可用的最大项目数
+mkspellmem      O 在 |:mkspell| 压缩树前可用的内存
+modeline        O 在文件开头或结尾识别模式行
+modelines       O 模式行的检查行数
+modifiable      O 可否修改文本
+modified        O 缓冲区已被修改
+more            O 全屏显示时暂停列表
+mouse           O 允许使用鼠标点击
+mousefocus      O 键盘焦点追随鼠标点击
+mousehide       O 输入时隐藏鼠标指针
+mousemodel      O 改变鼠标按钮的含义
+mouseshape      O 不同模式下改变鼠标指针的形状
+mousetime       O 鼠标双击之间的最大时间
+mzquantum       O MzScheme 线程的轮询间隔
+nrformats       O CTRL-A 命令识别的数字格式
+number          O 行前显示行号
+numberwidth     O 行号使用的列数
+omnifunc        O 文件类型特定补全使用的函数
+opendevice      O MS-Windows 上允许读/写设备
+operatorfunc    O |g@| 操作符调用的函数
+osfiletype      O 操作系统特定的文件格式信息
+paragraphs      O 分隔段落的 nroff 宏
+paste           O 允许粘贴文本
+pastetoggle     O 切换 'paste' 的键盘代码
+patchexpr       O 用于给文件打补丁的表达式
+patchmode       O 保留文件最老的版本
+path            O "gf" 等命令搜索用的目录列表
+preserveindent  O 重排时保持原有的缩进结构
+previewheight   O 预览窗口的高度
+previewwindow   O 标识预览窗口
+printdevice     O 用于 :hardcopy 的打印机名
+printencoding   O 用于打印的编码方式
+printexpr       O 用于 :hardcopy 打印 PostScript 的表达式
+printfont       O 用于 :hardcopy 的字体名
+printheader     O 用于 :hardcopy 的页眉格式
+printmbcharset  O 用于 :hardcopy 的 CJK 字符集
+printmbfont     O 用于 :hardcopy 的 CJK 输出的字体名
+printoptions    O 控制 :hardcopy 输出格式
+pumheight       O 弹出窗口的最大高度
+quoteescape     O 字符串里使用的转义字符
+readonly        O 禁止写入缓冲区
+redrawtime      O 'hlsearch' 和 |:match| 高亮的超时
+relativenumber  O 每行前显示相对行号
+remap           O 允许映射可以递归调用
+report          O 报告行改变的行数下限
+restorescreen   O Win32: 退出时恢复屏幕
+revins          O 字符插入会反向进行
+rightleft       O 窗口为从右到左模式
+rightleftcmd    O 从右到左模式工作的编辑命令
+ruler           O 标尺，在状态行里显示光标的行号和列号
+rulerformat     O 定制标尺格式
+runtimepath     O 用于运行时文件的目录列表
+scroll          O 用 CTRL-U 和 CTRL-O 滚动的行数
+scrollbind      O 其他窗口滚动时滚动当前窗口
+scrolljump      O 滚动所需的最少行数
+scrolloff       O 光标上下的最少行数
+scrollopt       O 'scrollbind' 的行为方式
+sections        O 分隔小节的 nroff 宏
+secure          O 在当前目录下以安全模式读入 .vimrc
+selection       O 使用何种选择方式
+selectmode      O 何时使用选择模式而不是可视模式
+sessionoptions  O :mksession 的选项
+shell           O 使用外部命令的 shell 程序名字
+shellcmdflag    O 执行命令所使用的 shell 的参数
+shellpipe       O 把 ":make" 结果输出到错误文件的字符串
+shellquote      O 括起 shell 命令的字符
+shellredir      O 把过滤命令的输出存到暂时文件的字符串
+shellslash      O shell 文件名使用正斜杠
+shelltemp       O shell 命令是否使用临时文件
+shelltype       O Amiga: 影响如何使用 shell
+shellxquote     O 类似于 'shellquote'，但包括重定向
+shiftround      O 缩进列数对齐到 shiftwidth 的整数倍
+shiftwidth      O (自动) 缩进使用的步进单位，以空白数目计
+shortmess       O 缩短消息长度的标志位列表
+shortname       O 非 MS-DOS: 文件名假定为 8.3 字符
+showbreak       O 用于提示回绕行开始的字符串
+showcmd         O 在状态行里显示 (部分) 命令
+showfulltag     O 自动补全标签时显示完整的标签匹配模式
+showmatch       O 插入括号时短暂跳转到匹配的括号
+showmode        O 在状态行上显示当前模式的消息
+showtabline     O 是否显示标签页行
+sidescroll      O 横向滚动的最少列数
+sidescrolloff   O 在光标左右最少出现的列数
+smartcase       O 模式中有大写字母时不忽略大小写
+smartindent     O C 程序智能自动缩进
+smarttab        O 插入 <Tab> 时使用 'shiftwidth'
+softtabstop     O 编辑时 <Tab> 使用的空格数
+spell           O 打开拼写检查
+spellcapcheck   O 定位句子尾部的模式
+spellfile       O |zg| 和 |zw| 保存单词的文件
+spelllang       O 拼写检查使用的语言
+spellsuggest    O 提供拼写校正建议的方法
+splitbelow      O 分割窗口时新窗口在当前窗口之下
+splitright      O 新窗口在当前窗口之右
+startofline     O 命令移动光标到行的第一个非空白
+statusline      O 状态行的定制格式
+suffixes        O 多个匹配所忽略的后缀
+suffixesadd     O 搜索文件时附加的后缀
+swapfile        O 缓冲区是否使用交换文件
+swapsync        O 和交换文件同步的方式
+switchbuf       O 设置切换到别的缓冲区时的行为
+synmaxcol       O 寻找语法项目的最大列数
+syntax          O 读入当前缓冲区的语法
+tabstop         O <Tab> 在文件里使用的空格数
+tabline         O 终端标签页行的定制格式
+tabpagemax      O |-p| 和 "tab all" 的最大标签页数
+tagbsearch      O 标签文件里用二分法查找
+taglength       O 标签里的有效字符数
+tagrelative     O 标签文件里的文件名是相对路径
+tags            O 标签命令使用的文件名列表
+tagstack        O 把标签推入标签栈
+term            O 终端名
+termbidi        O 终端支持双向文本
+termencoding    O 终端使用的编码方式
+terse           O 简化部分消息
+textauto        O 已废止，用 'fileformats'
+textmode        O 已废止，用 'fileformat'
+textwidth       O 插入文本的最大宽度
+thesaurus       O 关键字自动补全所用的同义词字典
+tildeop         O 波浪命令 "~" 以操作符方式工作
+timeout         O 映射和键盘代码等待超时
+timeoutlen      O 超时时间 (以毫秒计)
+title           O 让 Vim 设置窗口标题
+titlelen        O 用于窗口标题的 'columns' 比例
+titleold        O 旧的标题，用于退出时恢复
+titlestring     O 用于 Vim 窗口标题的字符串
+toolbar         O GUI: 工具栏显示何种项目
+toolbariconsize O 工具栏图标的大小 (只适用于 GTK 2)
+ttimeout        O 映射等待超时
+ttimeoutlen     O 键盘代码超时时间 (以毫秒计)
+ttybuiltin      O 在外部 termcap 之前先用内建的 termcap
+ttyfast         O 指示一个快速的终端连接
+ttymouse        O 鼠标产生代码的类型
+ttyscroll       O 滚动的最大行数
+ttytype         O 'term' 的别名
+undodir         O 保存撤销文件的位置
+undofile        O 把撤销信息写入一个文件里
+undolevels      O 最多可以撤销的改变个数
+undoreload      O 保存缓冲区重载撤销的最大行数
+updatecount     O 刷新交换文件所需的字符数
+updatetime      O 刷新交换文件所需的毫秒数
+verbose         O 给出详细信息
+verbosefile     O 消息写入的文件
+viewdir         O :mkview 存储文件的所在目录
+viewoptions     O 指定 :mkview 保存的内容
+viminfo         O 启动和退出时使用 .viminfo 文件
+virtualedit     O 何时使用虚拟编辑
+visualbell      O 使用可视铃声而不是响铃
+warn            O 当缓冲区改变时，对 shell 命令给出警告
+weirdinvert     O 用于有特殊反转方法的终端
+whichwrap       O 允许指定键跨越行边界
+wildchar        O 用于通配符扩展的命令行字符
+wildcharm       O 同 'wildchar'，但对映射情况也适用
+wildignore      O 匹配这些模式的文件不会参与自动补全
+wildmenu        O 命令行自动补全所使用的菜单
+wildmode        O 'wildchar' 命令行扩展所用的模式
+wildoptions     O 指定如何完成命令行补全
+winaltkeys      O 何时窗口系统处理 ALT 键
+window          O CTRL-F 和 CTRL-B 滚动的行数
+winheight       O 当前窗口的最少行数
+winfixheight    O 打开/关闭窗口时保持窗口高度
+winfixwidth     O 打开/关闭窗口时保持窗口宽度
+winminheight    O 任何窗口的最少行数
+winminwidth     O 任何窗口的最少列数
+winwidth        O 当前窗口的最少列数
+wrap            O 长行回绕并在下一行继续
+wrapmargin      O 使 (硬) 回绕开始的从右侧起算的字符数
+wrapscan        O 搜索在文件尾折回文件头
+write           O 允许写入文件
+writeany        O 写入文件不需 "!" 强制
+writebackup     O 覆盖文件时建立备份
+writedelay      O 每个字符延迟 (以毫秒计) (用于调试)
